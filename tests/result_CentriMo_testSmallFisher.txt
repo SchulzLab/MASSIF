@@ -1,0 +1,15 @@
+TF:	ARNT
+.	predicted motif	score
+
+1	LEF1	0.095
+2	ARNT	0.95
+3	AHR::ARNT	0.99
+4	HAND1::TCF3	0.99
+5	TAL1::TCF3	1.0
+
+TF:	REST
+.	predicted motif	score
+
+1	REST	0.0057
+2	TAL1::TCF3	1.0
+

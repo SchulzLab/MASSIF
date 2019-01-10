@@ -1,0 +1,8 @@
+TF:	REST
+.	predicted motif	score
+
+
+TF:	ARNT
+.	predicted motif	score
+
+
