@@ -1,9 +1,8 @@
 #!/bin/bash
 
+#path to CentriMo directory
 path_to_CentriMo=$1
 
-
-#TODO PWMs muss leer sein sonst geht das mit dem kleinen bsp nicht
 
 	echo "test small example with ARNT and REST"
 
