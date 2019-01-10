@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#path to CentriMo directory
+#path to meme-5.0.2 directory
 path_to_CentriMo=$1
 
 
