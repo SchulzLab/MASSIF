@@ -1,0 +1,341 @@
+DBD_1
+cluster_1	AHR::ARNT
+cluster_2	MAX::MYC
+cluster_3	TAL1::TCF3
+cluster_4	HAND1::TCF3
+cluster_5	GATA1::TAL1
+cluster_6	ARNT::HIF1A
+cluster_7	NEUROD2
+cluster_8	CLOCK
+cluster_9	ASCL2
+cluster_10	TFE3
+cluster_11	TWIST2
+cluster_12	HES1
+cluster_13	MYF6
+cluster_14	FIGLA
+cluster_15	MSC
+cluster_16	TCF7
+cluster_17	MITF
+cluster_18	NPAS2
+cluster_19	OLIG3
+cluster_20	TFEB
+cluster_21	ARNTL
+cluster_22	MNT
+cluster_23	TCFL5
+cluster_24	BHLHA15
+cluster_25	HEY2
+cluster_26	NEUROG2
+cluster_27	TFEC
+cluster_28	NEUROG1
+cluster_29	TCF7L2
+cluster_30	HES2
+cluster_31	ID4
+cluster_32	ATOH1
+cluster_33	ARNT
+cluster_34	SPZ1
+cluster_35	SREBF1(VAR.2)	SREBF2(VAR.2)
+cluster_36	SREBF1	SREBF2
+cluster_37	MYC	MYCN
+cluster_38	USF2	USF1
+cluster_39	NHLH1	MYOD1	TCF12	MYOG	TCF21	TFAP4
+cluster_40	TCF3	TCF4
+cluster_41	MAX	HEY1	MLX	MLXIPL	ID2	MLXIP	BHLHE40	BHLHE41	HES7	HES5
+cluster_42	OLIG2	BHLHE22	BHLHE23	OLIG1
+DBD_2
+cluster_1	DDIT3::CEBPA
+cluster_2	MAFG::NFE2L1
+cluster_3	FOS::JUN
+cluster_4	BATF::JUN
+cluster_5	CREB1
+cluster_6	ATF4
+cluster_7	CREB3L2
+cluster_8	ATF1
+cluster_9	CEBPG
+cluster_10	CEBPD
+cluster_11	MAFG
+cluster_12	HLF
+cluster_13	CEBPA
+cluster_14	NFIL3
+cluster_15	MAFF
+cluster_16	NRL
+cluster_17	MAFB
+cluster_18	CEBPB
+cluster_19	DBP
+cluster_20	ATF3
+cluster_21	CEBPE
+cluster_22	NRF1
+cluster_23	MAFK
+cluster_24	CREM
+cluster_25	NFE2L2	MAF::NFE2	BACH1::MAFK
+cluster_26	CREB3L1	CREB3	XBP1
+cluster_27	CREB5	ATF7	JDP2(VAR.2)	BATF3	JUND(VAR.2)	JUN
+cluster_28	JDP2	FOS	JUN(VAR.2)	FOSL2	JUNB	FOSL1	JUND	NFE2
+DBD_3
+cluster_1	PPARG::RXRA
+cluster_2	RARA::RXRA
+cluster_3	NR1H3::RXRA
+cluster_4	ESR1
+cluster_5	NR2F1
+cluster_6	ESR2
+cluster_7	NR5A2
+cluster_8	HNF4G
+cluster_9	RARG(VAR.2)
+cluster_10	NR4A2
+cluster_11	RORA
+cluster_12	RORA(VAR.2)
+cluster_13	ESRRG
+cluster_14	NR2E3
+cluster_15	NR2E1
+cluster_16	PPARG
+cluster_17	NR2F6(VAR.2)	RARA	RARG	RARB
+cluster_18	RARA(VAR.2)	RARB(VAR.2)
+cluster_19	AR	NR3C2	NR3C1
+cluster_20	RXRA::VDR	VDR
+cluster_21	ESRRB	ESRRA
+cluster_22	NR2C2	NR2F6	HNF4A	NR1H2::RXRA	RXRA	RXRB	RXRG
+DBD_4
+cluster_1	NFIC::TLX1
+cluster_2	HOXA5
+cluster_3	ALX3
+cluster_4	HOXA2
+cluster_5	NKX6-1
+cluster_6	MEOX2
+cluster_7	PROX1
+cluster_8	PRRX2
+cluster_9	GSX1
+cluster_10	RHOXF1
+cluster_11	SIX3
+cluster_12	HOXB2
+cluster_13	UNCX
+cluster_14	EN2
+cluster_15	NKX2-5
+cluster_16	NKX2-5(VAR.2)
+cluster_17	LMX1A
+cluster_18	EMX1
+cluster_19	LHX3
+cluster_20	DLX1
+cluster_21	LHX8
+cluster_22	PBX1
+cluster_23	ZEB1
+cluster_24	LMX1B
+cluster_25	HMBOX1
+cluster_26	LHX4
+cluster_27	HOXD8
+cluster_28	NOTO
+cluster_29	MIXL1
+cluster_30	HOXB3
+cluster_31	GSX2
+cluster_32	ISL2
+cluster_33	VAX2
+cluster_34	MNX1
+cluster_35	VAX1
+cluster_36	BARHL2
+cluster_37	BARHL1
+cluster_38	NKX6-2
+cluster_39	HNF1B	HNF1A
+cluster_40	HMX1	HMX2	HMX3
+cluster_41	DUX4	DUXA
+cluster_42	HOXC9	HOXA9
+cluster_43	ONECUT2	ONECUT3	ONECUT1	CUX2	CUX1
+cluster_44	POU4F1	POU4F3	POU4F2
+cluster_45	HOXC10	HOXC13	HOXA11	HOXD11	HOXC11	HOXC12	HOXD12
+cluster_46	PROP1	PHOX2A	PHOX2B
+cluster_47	POU5F1B	POU3F1	POU2F1	POU2F3	POU2F2	POU3F4	POU3F3	POU3F2	POU1F1
+cluster_48	HOXD3	HOXB5
+cluster_49	NKX3-2	NKX3-1	NKX2-3	NKX2-8
+cluster_50	VSX2	VSX1
+cluster_51	EVX2	EVX1
+cluster_52	GSC2	PITX1	PITX3	GSC	OTX1	OTX2	DMBX1	CRX
+cluster_53	BSX	BARX1	VENTX
+cluster_54	MEIS1	TGIF2	PKNOX2	TGIF1	PKNOX1	MEIS2	MEIS3
+cluster_55	LBX1	POU6F2	MEOX1
+cluster_56	DLX4	DLX3	RAX2	LHX9	SHOX	ESX1	LBX2	PRRX1	DLX6	DLX2	PDX1	MSX1	POU6F1	NOBOX	LHX6	ARX	ALX4	ALX1	LHX2	SHOX2	EN1	EMX2	RAX	MSX2	ISX	HESX1	GBX2	GBX1
+cluster_57	HOXD9	HOXA10	CDX1	HOXA13	CDX2	HOXD13	HOXB13
+DBD_5
+cluster_1	POU5F1::SOX2
+cluster_2	LEF1
+cluster_3	SOX9
+cluster_4	SRY
+cluster_5	SOX1
+cluster_6	SOX5
+cluster_7	SOX6
+cluster_8	SOX3
+cluster_9	SOX17
+cluster_10	SOX2
+cluster_11	SOX10
+cluster_12	SOX8
+cluster_13	SOX21	SOX11	SOX4
+DBD_6
+cluster_1	EWSR1::FLI1
+cluster_2	FEV
+cluster_3	ELF5
+cluster_4	ERF
+cluster_5	ETV5
+cluster_6	MYB
+cluster_7	MYBL2
+cluster_8	ETV6
+cluster_9	SPIB
+cluster_10	HLTF
+cluster_11	SPDEF
+cluster_12	ERG
+cluster_13	ETV4
+cluster_14	SPIC
+cluster_15	ETS1
+cluster_16	ETV3
+cluster_17	ETV1
+cluster_18	SPI1
+cluster_19	MYBL1
+cluster_20	ELK3
+cluster_21	IRF1	IRF7	IRF2	IRF9	IRF8
+cluster_22	EHF	ELF4	ELF3	ELF1	ELK4	GABPA
+cluster_23	ELK1	FLI1	ETV2
+DBD_7
+cluster_1	SMAD2::SMAD3::SMAD4
+cluster_2	NFIC
+cluster_3	SMAD3
+cluster_4	NFIA	NFIX
+DBD_8
+cluster_1	STAT1::STAT2
+cluster_2	STAT5A::STAT5B
+cluster_3	STAT6
+cluster_4	STAT3
+cluster_5	STAT4	STAT1
+DBD_9
+cluster_1	GATA4
+cluster_2	GATA5
+cluster_3	GATA2
+cluster_4	GATA3	GATA1
+DBD_10
+cluster_1	NFAT5
+cluster_2	EBF1
+cluster_3	NFATC3
+cluster_4	REL
+cluster_5	RELA
+cluster_6	NFATC2
+cluster_7	NFATC1
+cluster_8	NFKB1	NFKB2
+DBD_11
+cluster_1	HSF4
+cluster_2	HSF1	HSF2
+DBD_12
+cluster_1	TP73
+cluster_2	TP63	TP53
+DBD_13
+cluster_1	CTCF
+cluster_2	GFI1
+cluster_3	GLI2
+cluster_4	ZNF740
+cluster_5	ZNF423
+cluster_6	SP8
+cluster_7	ZBTB18
+cluster_8	MECOM
+cluster_9	GFI1B
+cluster_10	REST
+cluster_11	ZBED1
+cluster_12	ZNF263
+cluster_13	HIC2
+cluster_14	PLAG1
+cluster_15	ZNF354C
+cluster_16	ZFX
+cluster_17	YY2
+cluster_18	PRDM1
+cluster_19	RREB1
+cluster_20	HIC1
+cluster_21	ZBTB33
+cluster_22	YY1
+cluster_23	HINFP
+cluster_24	INSM1
+cluster_25	MTF1
+cluster_26	SNAI2
+cluster_27	MZF1
+cluster_28	MZF1(VAR.2)
+cluster_29	SCRT1	SCRT2
+cluster_30	GLIS2	GLIS3	GLIS1	ZIC4	ZIC1	ZIC3
+cluster_31	BCL6	BCL6B
+cluster_32	ZNF410	ZNF143
+cluster_33	ZBTB7C	ZBTB7B	ZBTB7A
+cluster_34	EGR1	EGR4	EGR2	EGR3
+cluster_35	SP3	KLF5	SP2	SP1	KLF16	KLF12	KLF14	SP4	KLF13	KLF1	KLF4
+DBD_14
+cluster_1	THAP1
+DBD_15
+cluster_1	FOXO4
+cluster_2	FOXD3
+cluster_3	FOXD2
+cluster_4	FOXQ1
+cluster_5	FOXH1
+cluster_6	FOXL1
+cluster_7	FOXB1
+cluster_8	FOXC1
+cluster_9	FOXO3
+cluster_10	FOXI1
+cluster_11	FOXC2
+cluster_12	FOXP3
+cluster_13	FOXD1
+cluster_14	FOXP1
+cluster_15	E2F6	E2F4	E2F8	E2F7
+cluster_16	RFX1	RFX4	RFX3	RFX5	RFX2
+cluster_17	FOXO1	FOXP2
+cluster_18	E2F1	E2F3	E2F2
+cluster_19	FOXA1	FOXA2
+cluster_20	FOXJ2	FOXO6	FOXF2	FOXG1
+cluster_21	FOXK1	FOXJ3
+DBD_16
+cluster_1	TBX2
+cluster_2	TBR1
+cluster_3	TBX21
+cluster_4	TBX20
+cluster_5	MGA
+cluster_6	TBX5
+cluster_7	TBX4
+cluster_8	EOMES
+cluster_9	TBX19	T
+cluster_10	TBX15	TBX1
+DBD_17
+cluster_1	MEF2C
+cluster_2	SRF
+cluster_3	MEF2A
+cluster_4	MEF2D	MEF2B
+DBD_18
+cluster_1	DMRT3
+DBD_19
+cluster_1	ARID5A
+cluster_2	ARID3A	ARID3B
+DBD_20
+cluster_1	NFYB	NFYA
+DBD_21
+cluster_1	PAX4
+cluster_2	PAX6
+cluster_3	PAX5
+cluster_4	PAX2
+cluster_5	PAX9	PAX1
+cluster_6	PAX3	PAX7
+DBD_22
+cluster_1	TFAP2B
+cluster_2	TFAP2B(VAR.2)
+cluster_3	TFAP2A
+cluster_4	TFAP2A(VAR.2)
+cluster_5	TFAP2A(VAR.3)
+cluster_6	TFAP2C
+cluster_7	TFAP2C(VAR.2)
+cluster_8	TFAP2B(VAR.3)	TFAP2C(VAR.3)
+DBD_23
+cluster_1	RUNX1
+cluster_2	RUNX3	RUNX2
+DBD_24
+cluster_1	TEAD1
+cluster_2	TEAD4
+cluster_3	TEAD3
+cluster_4	TEF
+DBD_25
+cluster_1	GCM1	GCM2
+DBD_26
+cluster_1	TBP
+DBD_27
+cluster_1	TFCP2	GRHL1
+DBD_28
+cluster_1	GMEB1	GMEB2
+DBD_29
+cluster_1	CENPB
+DBD_30
+cluster_1	LIN54
