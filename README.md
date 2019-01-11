@@ -26,7 +26,18 @@ where *path_to_meme_suite* is the path to the meme suite (something like /Home/.
 
 # Required input of MASSIF
 
-
-
+** Using the domain information as prediction **
+ To run the script where MASSIF apply the domain information as prediction the following input is required:
+ 
+ - * motif_file * file that contains all consider motifs as transfer format ( for example see tests/transfac_testSmall.txt)
+ 
+ - * path_to_meme_suite * path to the meme directory  
+ - * path_to_seq_dir * path to a directory that contain for each considered TF a fasta file
+ - * name  * name for the output files
+ - * path_to_biological_signal * path to a directory that contains for each TF a file with the biological signal
+ 
+** Using the domain information as a filter **
+The script that uses the domain information as a filer needs additionally:
+- * thresholds_domainInfo* a file that gives for a specific pvalue threshold the corresponding domain information pro DNA-binding domain. In the directory RandomMotifs there are several possible files for different pvalue thresholds provided. For the results shown in our paper we used as a pvalue threshold 0.001 (meaning we used the file pvalue_0.001_ThresholdDomainInfo.txt)
 
 # Output of MASSIF
