@@ -22,9 +22,11 @@ cd ../
 bash testSmall.sh path_to_meme_suite
 bash testBig.sg path_to_meme_suite
 ```
-where path_to_meme_suite is the path to the meme suite (something like /Home/.../meme-2.0.5/).
-
+where *path_to_meme_suite* is the path to the meme suite (something like /Home/.../meme-2.0.5/).
 
 # Required input of MASSIF
+
+
+
 
 # Output of MASSIF
