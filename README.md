@@ -1,7 +1,7 @@
 # MASSIF - motif association with domain information
 TODO: Overview and short explanation of MASSIF
 
-# Install MASSIF
+# Installation
 
 Necessary installed software and packages:
 
@@ -24,7 +24,7 @@ bash testBig.sg path_to_meme_suite
 ```
 where *path_to_meme_suite* is the path to the meme suite (something like /Home/.../meme-2.0.5/).
 
-# Required input of MASSIF
+# Required input
 
 ** Using the domain information as prediction **
  To run the script where MASSIF apply the domain information as prediction the following input is required:
@@ -35,13 +35,27 @@ where *path_to_meme_suite* is the path to the meme suite (something like /Home/.
  - *name* name for the output files
  - *path_to_biological_signal* path to a directory that contains for each TF a file with the biological signal (see tests/biologicalSignal_testSmall/).  TODO: explain how this files must look like
  
+ For instance, to run the small example the following command is required:
+ ```
+ python mainScript.py  tests/transfac_testSmall.txt path_to_meme-2.0.5/ tests/seq_testSmall/ testSmall tests/biologicalSignal_testSmall/
+ ```
+ 
 ** Using the domain information as a filter **
 The script that uses the domain information as a filer needs additionally:
 - *thresholds_domainInfo* a file that gives for a specific pvalue threshold the corresponding domain information pro DNA-binding domain. In the directory RandomMotifs there are several possible files for different pvalue thresholds provided. For the results shown in our paper we used as a pvalue threshold 0.001 (meaning, we used the file pvalue_0.001_ThresholdDomainInfo.txt)
 
+To run the small example we need the following command:
+ ```
+  python mainScript_FilteringFisherMethod.py  tests/transfac_testSmall.txt path_to_meme-2.0.5/ tests/seq_testSmall/ testSmallFisher tests/biologicalSignal_testSmall/ RandomMotifs/pvalue_0.001_ThresholdDomainInfo.txt
+ ```
+
 # Output of MASSIF
 
+** Using the domain information as prediction **
 
+
+
+** Using the domain information as a filter **
 
 
 
