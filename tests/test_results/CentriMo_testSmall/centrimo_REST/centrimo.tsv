@@ -13,4 +13,4 @@ db_index	motif_id	motif_alt_id	consensus	E-value	adj_p-value	log_adj_p-value	bin
 
 # CentriMo (Local Motif Enrichment Analysis): Version 5.0.2 compiled on Nov 15 2018 at 10:00:22
 # The format of this file is described at http://meme-suite.org/doc/centrimo-output-format.html.
-# centrimo --oc CentriMo_testSmall/centrimo_REST --ethresh 1000000000 tests/seq/REST.fa CentriMo_testSmall/PWMsInMemeFormat.txt
+# centrimo --oc CentriMo_testSmall/centrimo_REST --ethresh 1000000000 tests/seq_testSmall/REST.fa CentriMo_testSmall/PWMsInMemeFormat.txt

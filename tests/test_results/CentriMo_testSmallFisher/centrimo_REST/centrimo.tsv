@@ -1,0 +1,7 @@
+db_index	motif_id	motif_alt_id	consensus	E-value	adj_p-value	log_adj_p-value	bin_location	bin_width	total_width	sites_in_bin	total_sites	p_success	p-value	mult_tests
+   1	JASPAR183	REST	TTCAGCACCATGGACAGCDCC	1.1e-2	   5.7e-3	          -5.16	         0.0	     16.0	         80	         127	        470	  0.20000	1.5e-4	        39
+   1	JASPAR7	TAL1::TCF3	NSAMCATCTGKT	2.0e0	   1.0e0	          -0.00	         0.0	     19.0	         89	         344	       1537	  0.21348	1.8e-1	        44
+
+# CentriMo (Local Motif Enrichment Analysis): Version 5.0.2 compiled on Nov 15 2018 at 10:00:22
+# The format of this file is described at http://meme-suite.org/doc/centrimo-output-format.html.
+# centrimo --oc CentriMo_testSmallFisher/centrimo_REST --ethresh 1000000000 tests/seq_testSmall/REST.fa CentriMo_testSmallFisher/PWMsInMemeFormat.txt
