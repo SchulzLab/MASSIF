@@ -241,7 +241,7 @@ def main(transfac_file, CentriMo, fasta_dir, name , biological_signal):
 	command = "mkdir PFMs"
 	call(command)
 	
-	command = "python convertCountMatrixToFreqMatrix.py "  + transfac_file +  " PFMs/" 
+	command = "python src/convertCountMatrixToFreqMatrix.py "  + transfac_file +  " PFMs/" 
 	call(command)
 	
 	#---------------
