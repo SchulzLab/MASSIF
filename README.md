@@ -30,11 +30,11 @@ where *path_to_meme_suite* is the path to the meme suite (something like /Home/.
 
  To run the script where MASSIF apply the domain information as prediction the following input is required:
  
- - *motif_file* file that contains all consider motifs as transfer format (see tests/transfac_testSmall.txt for an example).
- - *path_to_meme_suite* path to the meme directory  
- - *path_to_seq_dir* path to a directory that contain for each considered TF a fasta file (see tests/seq_testSmall/)
- - *name* name for the output files
- - *path_to_biological_signal* path to a directory that contains for each TF a file with the biological signal (see tests/biologicalSignal_testSmall/).  TODO: explain how this files must look like
+ - **motif_file** file that contains all consider motifs as transfer format (see tests/transfac_testSmall.txt for an example).
+ - **path_to_meme_suite** path to the meme directory  
+ - **path_to_seq_dir** path to a directory that contain for each considered TF a fasta file (see tests/seq_testSmall/)
+ - **name* name for the output files
+ - **path_to_biological_signal** path to a directory that contains for each TF a file with the biological signal (see tests/biologicalSignal_testSmall/).  TODO: explain how this files must look like
  
  For instance, to run the small example the following command is required:
  ```
@@ -45,7 +45,7 @@ where *path_to_meme_suite* is the path to the meme suite (something like /Home/.
 **Using the domain information as a filter**
 
 The script that uses the domain information as a filer needs additionally:
-- *thresholds_domainInfo* a file that gives for a specific pvalue threshold the corresponding domain information pro DNA-binding domain. In the directory RandomMotifs there are several possible files for different pvalue thresholds provided. For the results shown in our paper we used as a pvalue threshold 0.001 (meaning, we used the file pvalue_0.001_ThresholdDomainInfo.txt)
+- **thresholds_domainInfo** a file that gives for a specific pvalue threshold the corresponding domain information pro DNA-binding domain. In the directory RandomMotifs there are several possible files for different pvalue thresholds provided. For the results shown in our paper we used as a pvalue threshold 0.001 (meaning, we used the file pvalue_0.001_ThresholdDomainInfo.txt)
 
 To run the small example we need the following command:
  ```
@@ -54,21 +54,20 @@ To run the small example we need the following command:
  with *path_to_meme_suite* is the path to the meme suite (something like /Home/.../meme-2.0.5/).
 
 # Output of MASSIF
-Both variations of MASSIF produce the following output 
+Both variations of MASSIF produce the following output: 
 
-- *CentriMo_name* original result from CentriMo
-- *result_CentriMo_name.txt* parsed result from CentriMo
-- *PASTAA_name* original result from PASTAA
-- *result_PASTAA_name.txt* parsed result from PASTAA
-- *result_PASTAA_normalized_name.txt* pvalues of the result from PASTAA are normalized by ... method
-- *result_DomainInfo_name.txt* ranking of the domain information (the bigger the value the better)
-- *result_fisherMethod_name.txt* final result 
+- **CentriMo_name** original result from CentriMo.
+- **result_CentriMo_name.txt** parsed result from CentriMo.
+- **PASTAA_name** original result from PASTAA.
+- **result_PASTAA_name.txt** parsed result from PASTAA.
+- **result_DomainInfo_name.txt** ranking of the domain information (the bigger the value the better).
+- **result_fisherMethod_name.txt** final result. For each TF a ranking of motifs is given. The higher the ranking of the motif the more likely this motif corresponds to the TF. 
 
 **Using the domain information as prediction**
 
-- *result_DomainInfoPvalues_name.txt* ranking of the pvalues of the domain information
+- **result_DomainInfoPvalues_name.txt** ranking  of the domain information interpreted as pvalue.
 
 **Using the domain information as a filter**
 
-- *significantMotifs_name.txt* file that contains for each TF the reduced motif set after the domain information is applied as filter
-- *setOfPWMs_name* the corresponding transfac files for each TF
+- **significantMotifs_name.txt** file that contains for each TF the reduced motif set after the domain information is applied as filter.
+- **setOfPWMs_name** directory that contains for each TF the motif_file for the reduced motif set.
