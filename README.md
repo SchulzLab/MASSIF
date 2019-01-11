@@ -9,7 +9,7 @@ Necessary installed software and packages:
 - compiler that is able to use openMP (and omp.h file which is part of the GNU OpenMP Library)
 
 Download the repository.
-To compile the C++ code of MASSIF go to the code directory and perform the command make 
+To compile the C++ code of MASSIF  perform the following commands: 
 ```
 cd MASSIF/src
 make
