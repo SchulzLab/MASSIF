@@ -39,7 +39,7 @@ where *path_to_meme_suite* is the path to the meme suite (something like /Home/.
  
  For instance, to run the small example the following command is required:
  ```
- python mainScript.py  tests/transfac_testSmall.txt path_to_meme_suite/ tests/seq_testSmall/ testSmall tests/biologicalSignal_testSmall/
+ python mainScript_DomainInfoPrediction.py  tests/transfac_testSmall.txt path_to_meme_suite/ tests/seq_testSmall/ testSmall tests/biologicalSignal_testSmall/
  ```
  where *path_to_meme_suite* is the path to the meme suite (something like /Home/.../meme-2.0.5/).
  
@@ -50,7 +50,7 @@ The script that uses the domain information as a filer needs additionally:
 
 To run the small example we need the following command:
  ```
-  python mainScript_FilteringFisherMethod.py  tests/transfac_testSmall.txt path_to_meme_suite/ tests/seq_testSmall/ testSmallFisher tests/biologicalSignal_testSmall/ RandomMotifs/pvalue_0.001_ThresholdDomainInfo.txt
+  python mainScript_DomainInfoFilter.py  tests/transfac_testSmall.txt path_to_meme_suite/ tests/seq_testSmall/ testSmallFisher tests/biologicalSignal_testSmall/ RandomMotifs/pvalue_0.001_ThresholdDomainInfo.txt
  ```
  with *path_to_meme_suite* is the path to the meme suite (something like /Home/.../meme-2.0.5/).
 
