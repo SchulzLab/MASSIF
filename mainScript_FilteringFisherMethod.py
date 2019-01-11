@@ -297,6 +297,7 @@ def main(transfac_file, CentriMo, fasta_dir, name , biological_signal, pvalue_cu
 	#TODO: hier koennte man denke auch parallelisieren
 	for f in fasta_files:
 		TF = f[:-3]
+		print(TF)
 		#step1: parse transfac PWMs in meme format
 		command = CentriMo + "/scripts/transfac2meme setOfPWMs_" + name + "/transfac_" + TF + ".txt" +  " >CentriMo_" + name + "/PWMsInMemeFormat.txt"
 		call(command)
