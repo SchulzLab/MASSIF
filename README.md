@@ -63,11 +63,11 @@ Both variations of MASSIF produce the following output:
 - **result_DomainInfo_name.txt** ranking of the domain information (the bigger the value the better).
 - **result_fisherMethod_name.txt** final result. For each TF a ranking of motifs is given. The higher the ranking of the motif the more likely this motif corresponds to the TF. 
 
-**Using the domain information as prediction**
+Using the domain information as prediction outputs additionally:
 
 - **result_DomainInfoPvalues_name.txt** ranking  of the domain information interpreted as pvalue.
 
-**Using the domain information as a filter**
+Applying the domain information as filter also provides as output:
 
 - **significantMotifs_name.txt** file that contains for each TF the reduced motif set after the domain information is applied as filter.
 - **setOfPWMs_name** directory that contains for each TF the motif_file for the reduced motif set.
