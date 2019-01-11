@@ -1,0 +1,24 @@
+db_index	motif_id	motif_alt_id	consensus	E-value	adj_p-value	log_adj_p-value	bin_location	bin_width	total_width	sites_in_bin	total_sites	p_success	p-value	mult_tests
+   1	JASPAR504	FOXA2	TGTTTACWYWGB	2.0e-529	   1.0e-530	       -1220.32	         0.0	     59.0	         89	       13202	      15760	  0.66292	2.4e-532	        44
+   1	JASPAR87	FOXA1	YNBNTGTTTACWYWD	5.5e-473	   2.9e-474	       -1090.37	         0.0	     54.0	         86	       11225	      13856	  0.62791	6.9e-476	        42
+   1	JASPAR292	CEBPB	RTTRCGCAAY	1.9e-3	   9.8e-5	          -9.23	         0.0	     31.0	         91	        1868	       5025	  0.34066	2.2e-6	        45
+   1	JASPAR139	FOSL2	KRRTGASTCAB	1.6e0	   8.6e-2	          -2.45	         0.0	     66.0	         90	        1241	       1622	  0.73333	2.0e-3	        44
+   1	JASPAR161	JUND	DRTGASTCATS	3.9e0	   2.0e-1	          -1.59	         0.0	     66.0	         90	         679	        880	  0.73333	5.2e-3	        44
+   1	JASPAR416	YY1	CAARATGGCBGC	5.0e0	   2.6e-1	          -1.34	         0.0	     47.0	         89	        1053	       1891	  0.52809	6.9e-3	        44
+   1	JASPAR211	MAX	AVCACGTGNY	5.2e0	   2.7e-1	          -1.29	         0.0	     23.0	         91	         823	       3019	  0.25275	7.1e-3	        45
+   1	JASPAR312	NFE2L2	CASNATGACTCAGCA	9.1e0	   4.8e-1	          -0.74	         0.0	     42.0	         86	        1248	       2444	  0.48837	1.5e-2	        42
+   1	JASPAR116	ELK1	ACCGGAAGTR	1.3e1	   6.8e-1	          -0.39	         0.0	     87.0	         91	        1167	       1206	  0.95604	2.5e-2	        45
+   1	JASPAR331	HNF4A	RGGGTCAAAGTCCAVT	1.6e1	   8.2e-1	          -0.20	         0.0	     75.0	         85	        1010	       1123	  0.88235	4.0e-2	        42
+   1	JASPAR168	HNF4G	NRRGDNCAAAGKYCA	1.6e1	   8.2e-1	          -0.19	         0.0	     84.0	         86	        7866	       8029	  0.97674	4.1e-2	        42
+   1	JASPAR398	ATF3	GATGACGT	1.9e1	   9.9e-1	          -0.01	         0.0	      1.0	         93	          47	       3588	  0.01075	1.0e-1	        46
+   1	JASPAR463	MAFK	MWDASTCAGCAWWWW	1.9e1	   1.0e0	          -0.00	         0.0	     84.0	         86	        3337	       3405	  0.97674	1.2e-1	        42
+   1	JASPAR160	BHLHE40	VKCACGTGMC	1.9e1	   1.0e0	          -0.00	         0.0	     13.0	         91	         202	       1308	  0.14286	1.3e-1	        45
+   1	JASPAR174	USF2	RYCAYGTGACY	1.9e1	   1.0e0	          -0.00	         0.0	      2.0	         90	          48	       1826	  0.02222	1.4e-1	        44
+   1	JASPAR408	ZBTB33	BTCTCGCGAGABYTS	1.9e1	   1.0e0	          -0.00	         0.0	     84.0	         86	         553	        562	  0.97674	1.6e-1	        42
+   1	JASPAR241	GABPA	CCGGAAGTGVV	1.9e1	   1.0e0	          -0.00	         0.0	      2.0	         90	          61	       2449	  0.02222	2.0e-1	        44
+   1	JASPAR50	CTCF	YGRCCASYAGRKGGCRSYR	1.9e1	   1.0e0	           0.00	         0.0	      2.0	         82	          54	       2360	  0.02439	7.0e-1	        40
+   1	JASPAR183	REST	TTCAGCACCATGGACAGCDCC	1.9e1	   1.0e0	           0.00	         0.0	      2.0	         80	          11	        481	  0.02500	6.6e-1	        39
+
+# CentriMo (Local Motif Enrichment Analysis): Version 5.0.2 compiled on Nov 15 2018 at 10:00:22
+# The format of this file is described at http://meme-suite.org/doc/centrimo-output-format.html.
+# centrimo --oc CentriMo_testBig/centrimo_FOXA2 --ethresh 1000000000 tests/seq_testBig/FOXA2.fa CentriMo_testBig/PWMsInMemeFormat.txt

@@ -1,0 +1,161 @@
+TF:	JUND
+.	predicted motif	score
+
+1	JUND	1.7e-186
+2	FOSL2	7.8e-171
+3	ATF3	7.3e-83
+4	NFE2L2	1.8e-79
+5	CEBPB	1.3e-09
+6	MAFK	6e-06
+7	MAX	1.0
+8	BHLHE40	1.0
+
+TF:	USF2
+.	predicted motif	score
+
+1	MAX	0.0
+2	USF2	0.0
+3	BHLHE40	0.0
+
+TF:	HNF4G
+.	predicted motif	score
+
+1	HNF4G	4.1e-134
+2	HNF4A	3.5e-88
+
+TF:	FOXA1
+.	predicted motif	score
+
+1	FOXA2	4.29837111882e-322
+2	FOXA1	4.4e-304
+
+TF:	ATF3
+.	predicted motif	score
+
+1	JUND	7.7e-56
+2	CEBPB	1.4e-52
+3	FOSL2	5.2e-42
+4	ATF3	3.6e-39
+5	NFE2L2	6.1e-24
+6	MAFK	2.2e-09
+7	MAX	1.0
+8	BHLHE40	1.0
+
+TF:	BHLHE40
+.	predicted motif	score
+
+1	BHLHE40	0.0
+2	MAX	1.08694442085e-322
+3	USF2	5.3e-206
+
+TF:	FOS
+.	predicted motif	score
+
+1	FOSL2	0.0
+2	JUND	0.0
+3	NFE2L2	0.0
+4	ATF3	5.4e-272
+5	MAFK	1.7e-60
+6	BHLHE40	0.12
+7	CEBPB	0.66
+8	MAX	0.98
+
+TF:	CEBPB
+.	predicted motif	score
+
+1	CEBPB	0.0
+2	ATF3	1.4e-68
+3	NFE2L2	3e-27
+4	FOSL2	1.9e-11
+5	JUND	2.6e-11
+6	MAFK	0.00073
+7	MAX	0.097
+8	BHLHE40	0.95
+
+TF:	FOXA2
+.	predicted motif	score
+
+1	FOXA2	0.0
+2	FOXA1	0.0
+
+TF:	YY1
+.	predicted motif	score
+
+1	YY1	2.2e-44
+2	REST	0.93
+3	ZBTB33	0.99
+4	CTCF	1.0
+
+TF:	GABPA
+.	predicted motif	score
+
+1	ELK1	2e-49
+2	GABPA	7.2e-47
+
+TF:	ELK1
+.	predicted motif	score
+
+1	ELK1	0.00022
+2	GABPA	0.001
+
+TF:	HNF4A
+.	predicted motif	score
+
+1	HNF4G	0.0
+2	HNF4A	2e-299
+
+TF:	MAFK
+.	predicted motif	score
+
+1	MAFK	0.0
+2	NFE2L2	0.0
+3	JUND	0.0
+4	FOSL2	0.0
+5	ATF3	1.1e-106
+6	CEBPB	1.5e-08
+7	BHLHE40	1.0
+8	MAX	1.0
+
+TF:	REST
+.	predicted motif	score
+
+1	REST	2.4e-91
+2	CTCF	0.38
+3	YY1	1.0
+4	ZBTB33	1.0
+
+TF:	MAX
+.	predicted motif	score
+
+1	MAX	2.5e-99
+2	USF2	1.9e-55
+3	BHLHE40	2.2e-43
+
+TF:	CTCF
+.	predicted motif	score
+
+1	CTCF	1e-21
+2	ZBTB33	0.54
+3	YY1	1.0
+4	REST	1.0
+
+TF:	ZBTB33
+.	predicted motif	score
+
+1	ZBTB33	2.6e-28
+2	CTCF	1.0
+3	YY1	1.0
+4	REST	1.0
+
+TF:	NFE2L2
+.	predicted motif	score
+
+1	NFE2L2	0.0
+2	JUND	0.0
+3	FOSL2	0.0
+4	ATF3	0.0
+5	MAFK	0.0
+6	CEBPB	0.11
+7	BHLHE40	1.0
+8	MAX	1.0
+
