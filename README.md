@@ -26,7 +26,8 @@ where *path_to_meme_suite* is the path to the meme suite (something like /Home/.
 
 # Required input
 
-** Using the domain information as prediction **
+**Using the domain information as prediction**
+
  To run the script where MASSIF apply the domain information as prediction the following input is required:
  
  - *motif_file* file that contains all consider motifs as transfer format (see tests/transfac_testSmall.txt for an example).
@@ -37,27 +38,37 @@ where *path_to_meme_suite* is the path to the meme suite (something like /Home/.
  
  For instance, to run the small example the following command is required:
  ```
- python mainScript.py  tests/transfac_testSmall.txt path_to_meme-2.0.5/ tests/seq_testSmall/ testSmall tests/biologicalSignal_testSmall/
+ python mainScript.py  tests/transfac_testSmall.txt path_to_meme_suite/ tests/seq_testSmall/ testSmall tests/biologicalSignal_testSmall/
  ```
+ where *path_to_meme_suite* is the path to the meme suite (something like /Home/.../meme-2.0.5/).
  
-** Using the domain information as a filter **
+**Using the domain information as a filter**
+
 The script that uses the domain information as a filer needs additionally:
 - *thresholds_domainInfo* a file that gives for a specific pvalue threshold the corresponding domain information pro DNA-binding domain. In the directory RandomMotifs there are several possible files for different pvalue thresholds provided. For the results shown in our paper we used as a pvalue threshold 0.001 (meaning, we used the file pvalue_0.001_ThresholdDomainInfo.txt)
 
 To run the small example we need the following command:
  ```
-  python mainScript_FilteringFisherMethod.py  tests/transfac_testSmall.txt path_to_meme-2.0.5/ tests/seq_testSmall/ testSmallFisher tests/biologicalSignal_testSmall/ RandomMotifs/pvalue_0.001_ThresholdDomainInfo.txt
+  python mainScript_FilteringFisherMethod.py  tests/transfac_testSmall.txt path_to_meme_suite/ tests/seq_testSmall/ testSmallFisher tests/biologicalSignal_testSmall/ RandomMotifs/pvalue_0.001_ThresholdDomainInfo.txt
  ```
+ with *path_to_meme_suite* is the path to the meme suite (something like /Home/.../meme-2.0.5/).
 
 # Output of MASSIF
+Both variations of MASSIF produce the following output 
 
-** Using the domain information as prediction **
+- *CentriMo_name* original result from CentriMo
+- *result_CentriMo_name.txt* parsed result from CentriMo
+- *PASTAA_name* original result from PASTAA
+- *result_PASTAA_name.txt* parsed result from PASTAA
+- *result_PASTAA_normalized_name.txt* pvalues of the result from PASTAA are normalized by ... method
+- *result_DomainInfo_name.txt* ranking of the domain information (the bigger the value the better)
+- *result_fisherMethod_name.txt* final result 
 
+**Using the domain information as prediction**
 
+- *result_DomainInfoPvalues_name.txt* ranking of the pvalues of the domain information
 
-** Using the domain information as a filter **
+**Using the domain information as a filter**
 
-
-
-
-
+- *significantMotifs_name.txt* file that contains for each TF the reduced motif set after the domain information is applied as filter
+- *setOfPWMs_name* the corresponding transfac files for each TF
