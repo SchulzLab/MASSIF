@@ -53,7 +53,7 @@ To run the small example we need the following command:
  ```
  with *path_to_meme_suite* is the path to the meme suite (something like /Home/.../meme-2.0.5/).
 
-# Output of MASSIF
+# Output 
 Both variations of MASSIF produce the following output: 
 
 - **CentriMo_name** original result from CentriMo.
