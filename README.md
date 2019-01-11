@@ -45,7 +45,7 @@ where *path_to_meme_suite* is the path to the meme suite (something like /Home/.
 **Using the domain information as a filter**
 
 The script that uses the domain information as a filer needs additionally:
-- **thresholds_domainInfo** a file that gives for a specific pvalue threshold the corresponding domain information pro DNA-binding domain. The directory [RandomMotifs](RandomMotifs/) provides  several possible files for different pvalue thresholds. For the results shown in our paper, we used as a pvalue threshold 0.001 (meaning, we used the file pvalue_0.001_ThresholdDomainInfo.txt)
+- **thresholds_domainInfo** a file that gives for a specific pvalue threshold the corresponding domain information pro DNA-binding domain. The directory [RandomMotifs](RandomMotifs/) provides  several possible files for different pvalue thresholds. For the results shown in our paper, we used as a pvalue threshold 0.001 (meaning, we used the file [pvalue_0.001_ThresholdDomainInfo.txt](RandomMotifs/pvalue_0.001_ThresholdDomainInfo.txt)
 
 To run the small example we need the following command:
  ```
