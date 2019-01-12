@@ -5,7 +5,7 @@ TODO: Overview and short explanation of MASSIF
 
 Necessary installed software and packages:
 
-- [The Meme Suite](http://meme-suite.org/doc/download.html) (version 5.0.2) to use CentriMo
+- [The Meme Suite](http://meme-suite.org/doc/download.html) (version 5.0.2 or 5.0.3) to use CentriMo
 - compiler that is able to use openMP (and omp.h file which is part of the GNU OpenMP Library)
 - TODO: explain how to install on the mac
 
