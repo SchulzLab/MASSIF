@@ -4,7 +4,7 @@
 #include <string>
 #include <iostream>
 #include <memory>
-//#include <vector>
+#include <vector>
 #include <array>
 #include <algorithm>
 #include <stdexcept>
