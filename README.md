@@ -1,7 +1,7 @@
 # MASSIF - motif association with domain information
 MASSIF - motif association with domain information - is a tool to improve the performance of existing MEA tools. 
 The main idea of our approach is to use the DNA-binding domain (DBD) of the TF to develop a domain information. 
-Therefore we assume that a predicted TF-motif association is more likely to be the correct one if the TF and the motif share a similar DNA-binding domain (DBD). 
+Therefore we assume that a TF-motif association predicted by a existing MEA tool is more likely to be the correct one if the TF and the motif share a similar DNA-binding domain (DBD). 
 For the considered TF the DBD is either known or can be predicted. 
 However, we do not know the DBD for all motifs, especially for de-novo motifs. 
 For that reason we can not simply discard TF-motif pairs with different DBDs.
