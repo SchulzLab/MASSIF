@@ -44,11 +44,11 @@ where *path_to_meme_suite* is the path to the meme suite (something like /Home/.
 
  To run the script where MASSIF apply the domain information as prediction the following input is required:
  
- - **motif_file** file that contains all consider motifs as TRANSFAC format (see [tests/transfac_testSmall.txt](tests/transfac_testSmall.txt for an example).
+ - **motif_file** file that contains all consider motifs as TRANSFAC format (see [tests/transfac_testSmall.txt](tests/transfac_testSmall.txt) for an example).
  - **path_to_meme_suite** path to the meme directory  
- - **path_to_seq_dir** path to a directory that contains for each considered TF a fasta file (see [tests/seq_testSmall/](tests/seq_testSmall/)
+ - **path_to_seq_dir** path to a directory that contains for each considered TF a fasta file (see [tests/seq_testSmall/](tests/seq_testSmall/))
  - **name** name for the output files
- - **path_to_biological_signal** path to a directory that contains for each TF a file with the biological signal (see [tests/biologicalSignal_testSmall/](tests/biologicalSignal_testSmall/).  TODO: explain how this files must look like
+ - **path_to_biological_signal** path to a directory that contains for each TF a file with the biological signal (see [tests/biologicalSignal_testSmall/](tests/biologicalSignal_testSmall/)).  TODO: explain how this files must look like
  
  For instance, to run the small example the following command is required:
  ```
