@@ -8,9 +8,10 @@ For that reason we can not simply discard TF-motif pairs with different DBDs.
 Instead we construct a DBD database consisting of a set of known TF-motif pairs sorted according to their DBDs. 
 Using the information provided by the database we are able to calculate the similarity between the predicted motif and the set of motifs that are linked to the DBD of the TF. 
 We use this similarity, called domain information, in two different ways:
- - Using fisher's method \citep{fishers_method} to combine the domain information with the predictions of existing MEA tools.
+ - Using fisher's method to combine the domain information with the predictions of existing MEA tools.
 - Applying the domain information as a filter to reduce the motif set before the MEA.
 
+MASSIF uses as MEA tools CentriMo and PASTAA. 
 # Installation
 
 Necessarily installed software and packages:
