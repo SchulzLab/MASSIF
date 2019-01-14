@@ -48,7 +48,7 @@ where *path_to_meme_suite* is the path to the meme suite (something like /Home/.
  - **path_to_meme_suite** path to the meme directory  
  - **path_to_seq_dir** path to a directory that contains for each considered TF a fasta file (see [tests/seq_testSmall/](tests/seq_testSmall/))
  - **name** name for the output files
- - **path_to_biological_signal** path to a directory that contains for each TF a file with the biological signal (see [tests/biologicalSignal_testSmall/](tests/biologicalSignal_testSmall/)).  TODO: explain how this files must look like
+ - **path_to_biological_signal** path to a directory that contains for each TF a file with the biological signal (see [tests/biologicalSignal_testSmall/](tests/biologicalSignal_testSmall/)). For our examples provided in the paper we used as biological signal the signalValue provided by ENCODE. The file contains two tab-seperated columns. The first colum represents all headers (without >) of the corresponding FASTA-file sorted according to the intensity of their biological signal. The second colum just give the ranks. For instance the header of the sequence with the highest biological signal is listed first and the rank is 1. The biological signal itself is not necessary to provide in this file.
  
  For instance, to run the small example the following command is required:
  ```
