@@ -11,7 +11,7 @@ We use this similarity, called domain information, in two different ways:
  - Using fisher's method to combine the domain information with the predictions of existing MEA tools.
 - Applying the domain information as a filter to reduce the motif set before the MEA.
 
-MASSIF uses as MEA tools CentriMo and PASTAA. An overview is shown below:
+MASSIF uses as MEA tools [CentriMo](https://academic.oup.com/nar/article/40/17/e128/2411117) and [PASTAA](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2642637/). An overview is shown below:
 
 ![overview.png](overview.png)
 # Installation
