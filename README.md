@@ -1,5 +1,15 @@
 # MASSIF - motif association with domain information
-TODO: Overview and short explanation of MASSIF
+MASSIF - motif association with domain information - is a tool to improve the performance of existing MEA tools. 
+The main idea of our approach is to use the DNA-binding domain (DBD) of the TF to develop a domain information. 
+Therefore we assume that a predicted TF-motif association is more likely to be the correct one if the TF and the motif share a similar DNA-binding domain (DBD). 
+For the considered TF the DBD is either known or can be predicted. 
+However, we do not know the DBD for all motifs, especially for de-novo motifs. 
+For that reason we can not simply discard TF-motif pairs with different DBDs.
+Instead we construct a DBD database consisting of a set of known TF-motif pairs sorted according to their DBDs. 
+Using the information provided by the database we are able to calculate the similarity between the predicted motif and the set of motifs that are linked to the DBD of the TF. 
+We use this similarity, called domain information, in two different ways:
+ - Using fisher's method \citep{fishers_method} to combine the domain information with the predictions of existing MEA tools.
+- Applying the domain information as a filter to reduce the motif set before the MEA.
 
 # Installation
 
@@ -23,7 +33,7 @@ cd ../
 bash testSmall.sh path_to_meme_suite
 bash testBig.sg path_to_meme_suite
 ```
-where *path_to_meme_suite* is the path to the meme suite (something like /Home/.../meme-2.0.5/).
+where *path_to_meme_suite* is the path to the meme suite (something like /Home/.../meme-2.0.5/). The second test case may take some time. 
 
 # Required input
 
