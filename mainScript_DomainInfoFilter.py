@@ -377,6 +377,6 @@ def main(transfac_file, CentriMo, fasta_dir, name , biological_signal, pvalue_cu
 
 # call main
 if(len(sys.argv))< 7:
-	print("Usage python ./main_script.py transfac_file, CentriMo_source_code_dir, fasta_dir,name,  biological_signal, pvalue_cutoff")
+	print("Usage python ./mainScript_domainInfoFilter.py transfac_file, CentriMo_source_code_dir, fasta_dir,name,  biological_signal, pvalue_cutoff")
 else:
 	main(sys.argv[1], sys.argv[2], sys.argv[3], sys.argv[4], sys.argv[5], sys.argv[6])
