@@ -312,6 +312,6 @@ def main(transfac_file, CentriMo, fasta_dir, name , biological_signal):
 	
 # call main
 if(len(sys.argv))< 6:
-	print("Usage python ./main_script.py transfac_file, CentriMo_source_code_dir, fasta_dir,name,  biological_signal")
+	print("Usage python ./mainScript_domainInfoPrediction.py transfac_file, CentriMo_source_code_dir, fasta_dir,name,  biological_signal")
 else:
 	main(sys.argv[1], sys.argv[2], sys.argv[3], sys.argv[4], sys.argv[5])
