@@ -197,7 +197,7 @@ def main(transfac_file, CentriMo, fasta_dir, name , biological_signal):
 	print("----------\nCentriMo\n----------")
 
 	#step1: call CentriMo
-	command = "mkdir CentriMo_" + name
+	command = "mkdir -p CentriMo_" + name
 	call(command)
 	#step2: parse transfac PWMs in meme format
 	command = CentriMo + "/scripts/transfac2meme " + transfac_file + " >CentriMo_" + name+ "/PWMsInMemeFormat.txt"
@@ -215,7 +215,7 @@ def main(transfac_file, CentriMo, fasta_dir, name , biological_signal):
 	#---------------
 	print("----------\nPASTAA\n----------")
 
-	command = "mkdir  PASTAA_" + name
+	command = "mkdir -p PASTAA_" + name
 	call(command)
 	command = "./src/PSCM_to_PSEM " + transfac_file +  " >PASTAA_" + name  + "/energy.txt"
 	call(command)
@@ -238,7 +238,7 @@ def main(transfac_file, CentriMo, fasta_dir, name , biological_signal):
 	#---------------
 	#Step 1: create PFMs 
 	#---------------
-	command = "mkdir PFMs"
+	command = "mkdir -p PFMs"
 	call(command)
 	
 	command = "python src/convertCountMatrixToFreqMatrix.py "  + transfac_file +  " PFMs/" 
