@@ -263,7 +263,7 @@ def main(transfac_file, CentriMo, fasta_dir, name , biological_signal, pvalue_cu
 	#---------------
 	#Step 1: create PFMs 
 	#---------------
-	command = "mkdir PFMs"
+	command = "mkdir -p PFMs"
 	call(command)
 	
 	command = "python src/convertCountMatrixToFreqMatrix.py "  + transfac_file +  " PFMs/" 
@@ -279,7 +279,7 @@ def main(transfac_file, CentriMo, fasta_dir, name , biological_signal, pvalue_cu
 	#---------------
 	print("----------\ndeterminePvaluesOfDomainInfo\n----------")
 	
-	command = "mkdir setOfPWMs_" + name  + "/"
+	command = "mkdir -p setOfPWMs_" + name  + "/"
 	call(command)
 	determineSignificantMotifs("result_DomainInfo_" + name + ".txt", pvalue_cutoff_file, CLUSTER_JASPAR + "TF_to_DBD.txt", "setOfPWMs_" + name + "/", transfac_file, name)
 
@@ -291,7 +291,7 @@ def main(transfac_file, CentriMo, fasta_dir, name , biological_signal, pvalue_cu
 	#---------------
 	print("----------\nCentriMo\n----------")
 
-	command = "mkdir CentriMo_" + name
+	command = "mkdir -p CentriMo_" + name
 	call(command)
 	
 	#TODO: hier koennte man denke auch parallelisieren
@@ -312,7 +312,7 @@ def main(transfac_file, CentriMo, fasta_dir, name , biological_signal, pvalue_cu
 	print("----------\nPASTAA\n----------")
 
 
-	command = "mkdir  PASTAA_" + name
+	command = "mkdir  -p PASTAA_" + name
 	call(command)
 
 	for f in fasta_files:
