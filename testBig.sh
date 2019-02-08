@@ -5,7 +5,7 @@ path_to_meme=$1
 
 
 	#ensures that PFMs is really empty
-	mkdir PFMs
+	mkdir -p PFMs
 	rm PFMs/*
 
 	echo "test bigger example with 21 seq sets and 21 motifs"
