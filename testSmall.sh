@@ -7,7 +7,7 @@ path_to_CentriMo=$1
 	echo "test small example with ARNT and REST"
 
 	#ensures that PFMs is really empty
-	mkdir PFMs
+	mkdir -p PFMs
 	rm PFMs/*
 	#call main script (domain information is used as prediction
 	echo "using domain info as prediction"
