@@ -20,7 +20,7 @@ Necessarily installed software and packages:
 
 - [The Meme Suite](http://meme-suite.org/doc/download.html) (version 5.0.2 or 5.0.3) to use CentriMo
 - C++ compiler that is able to use openMP (and omp.h file which is part of the GNU OpenMP Library)
-(Notice, for Mac OS the clang++ compiler and the packages libopm is necessary. libopm can for instance be isntalled with 'brew install libomp')
+(Notice, for Mac OS the clang++ compiler and the packages libopm is necessary. libopm can for instance be installed with 'brew install libomp')
 
 Download the repository. Notice, that the code for PASTAA is enclosed. 
 To compile the C++ code of MASSIF and PASTAA perform the following commands: 
