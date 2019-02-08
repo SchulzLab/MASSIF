@@ -321,9 +321,7 @@ def main(transfac_file, CentriMo, fasta_dir, name , biological_signal, pvalue_cu
 		call(command)
 		command =  "./src/TRAP PASTAA_"+ name + "/energy.txt " +  fasta_dir + f + " > PASTAA_"+ name + "/affinity_" + TF + ".txt"	
 		call(command)
-
 		command =  "./src/PASTAA PASTAA_" + name  + "/affinity_" + TF + ".txt " + biological_signal + "gene_list_" + TF +  ".txt |  sort -k2,2 -g  > PASTAA_"+ name + "/enrichment_" + TF + ".txt"
-		print (command)
 		call(command)
 
 	result_pastaa = evaluationPASTAA("PASTAA_"+ name, name)
