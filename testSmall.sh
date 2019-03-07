@@ -19,6 +19,6 @@ path_to_CentriMo=$1
 
 	echo "using domain info as filter"
 	rm PFMs/*
- 	time python mainScript_DomainInfoFilter.py  tests/transfac_testSmall.txt ${path_to_CentriMo} tests/seq_testSmall/ testSmallFisher tests/biologicalSignal_testSmall/ RandomMotifs/pvalue_0.001_ThresholdDomainInfo.txt 
+ 	time python mainScript_DomainInfoFilter.py  tests/transfac_testSmall.txt ${path_to_CentriMo} tests/seq_testSmall/ testSmallFilter tests/biologicalSignal_testSmall/ RandomMotifs/pvalue_0.001_ThresholdDomainInfo.txt 
 
 	#diff --suppress-common-lines result_fisherMethod_testSmallFisher.txt  tests/test_results/result_fisherMethod_testSmallFisher.txt

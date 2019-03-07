@@ -3,6 +3,7 @@ import os
 import operator
 import subprocess
 import math
+from scipy.stats import chi2
 
 #Global variables
 NUMBER_CLUSTERS = 35
@@ -300,7 +301,11 @@ def main(transfac_file, CentriMo, fasta_dir, name , biological_signal):
 				motif = result_p[i][0]
 				#fishers method
 				current_value = -2 * (math.log(max(float(result_p[i][1]),2.2250738585072014e-308 )) + math.log(max(float(result_c[counter_centrimo][1]), 2.2250738585072014e-308)) + math.log(max(float(result_d[i][1]), 2.2250738585072014e-308 )))	
-				result_f.append((motif, current_value))
+
+				#determine pvalue
+				cdf_current_value = 1 - (chi2.cdf(current_value, df = 2)) 
+
+				result_f.append((motif, current_value, cdf_current_value))
 		
 		result_fisher[k] = sorted(result_f, key=lambda tup : tup[1], reverse = True)
 
@@ -308,7 +313,15 @@ def main(transfac_file, CentriMo, fasta_dir, name , biological_signal):
 	number_files = 0.0
 	for k in keys:
 		number_files = number_files + 1
-		writeOutput(final_output, result_fisher[k], k)	
+		final_output.write("TF:\t" + k + '\n')
+		final_output.write(".\tpredicted motif\tscore\tp-value\n")
+		final_output.write('\n')
+		counter = 0
+		for t in result_fisher[k]:
+			counter = counter +1
+			final_output.write(str(counter) + '\t' + str(t[0]) + '\t' + str(t[1]) + '\t' + str(t[2]) + "\n")
+		final_output.write("\n")
+	#	writeOutput(final_output, result_fisher[k], k)	
 	
 # call main
 if(len(sys.argv))< 6:

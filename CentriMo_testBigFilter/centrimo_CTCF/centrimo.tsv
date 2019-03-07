@@ -1,0 +1,9 @@
+db_index	motif_id	motif_alt_id	consensus	E-value	adj_p-value	log_adj_p-value	bin_location	bin_width	total_width	sites_in_bin	total_sites	p_success	p-value	mult_tests
+   1	JASPAR50	CTCF	YGRCCASYAGRKGGCRSYR	4.0e-21	   1.0e-21	         -48.36	         0.0	     72.0	         82	       11022	      12160	  0.87805	2.5e-23	        40
+   1	JASPAR408	ZBTB33	BTCTCGCGAGABYTS	2.2e0	   5.4e-1	          -0.62	         0.0	     68.0	         86	        1365	       1682	  0.79070	1.8e-2	        42
+   1	JASPAR416	YY1	CAARATGGCBGC	4.0e0	   1.0e0	          -0.00	         0.0	      3.0	         89	          99	       2593	  0.03371	1.1e-1	        44
+   1	JASPAR183	REST	TTCAGCACCATGGACAGCDCC	4.0e0	   1.0e0	          -0.00	         0.0	     74.0	         80	         431	        461	  0.92500	2.4e-1	        39
+
+# CentriMo (Local Motif Enrichment Analysis): Version 5.0.2 compiled on Nov 15 2018 at 10:00:22
+# The format of this file is described at http://meme-suite.org/doc/centrimo-output-format.html.
+# centrimo --oc CentriMo_testBigFilter/centrimo_CTCF --ethresh 1000000000 tests/seq_testBig/CTCF.fa CentriMo_testBigFilter/PWMsInMemeFormat.txt

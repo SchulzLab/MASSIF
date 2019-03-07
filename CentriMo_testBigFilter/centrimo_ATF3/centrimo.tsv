@@ -1,0 +1,13 @@
+db_index	motif_id	motif_alt_id	consensus	E-value	adj_p-value	log_adj_p-value	bin_location	bin_width	total_width	sites_in_bin	total_sites	p_success	p-value	mult_tests
+   1	JASPAR161	JUND	DRTGASTCATS	6.1e-55	   7.7e-56	        -126.91	         0.0	     38.0	         90	        1128	       1860	  0.42222	1.7e-57	        44
+   1	JASPAR292	CEBPB	RTTRCGCAAY	1.2e-51	   1.4e-52	        -119.37	         0.0	     59.0	         91	        3451	       4574	  0.64835	3.2e-54	        45
+   1	JASPAR139	FOSL2	KRRTGASTCAB	4.1e-41	   5.2e-42	         -95.06	         0.0	     40.0	         90	        1387	       2365	  0.44444	1.2e-43	        44
+   1	JASPAR398	ATF3	GATGACGT	2.9e-38	   3.6e-39	         -88.53	         0.0	     39.0	         93	        1904	       3592	  0.41935	7.7e-41	        46
+   1	JASPAR312	NFE2L2	CASNATGACTCAGCA	4.8e-23	   6.1e-24	         -53.46	         0.0	     42.0	         86	        1396	       2343	  0.48837	1.4e-25	        42
+   1	JASPAR463	MAFK	MWDASTCAGCAWWWW	1.8e-8	   2.2e-9	         -19.93	         0.0	     32.0	         86	        1136	       2617	  0.37209	5.3e-11	        42
+   1	JASPAR211	MAX	AVCACGTGNY	8.0e0	   1.0e0	          -0.00	         0.0	     87.0	         91	        1578	       1645	  0.95604	3.1e-1	        45
+   1	JASPAR160	BHLHE40	VKCACGTGMC	8.0e0	   1.0e0	          -0.00	         0.0	     13.0	         91	         131	        882	  0.14286	3.3e-1	        45
+
+# CentriMo (Local Motif Enrichment Analysis): Version 5.0.2 compiled on Nov 15 2018 at 10:00:22
+# The format of this file is described at http://meme-suite.org/doc/centrimo-output-format.html.
+# centrimo --oc CentriMo_testBigFilter/centrimo_ATF3 --ethresh 1000000000 tests/seq_testBig/ATF3.fa CentriMo_testBigFilter/PWMsInMemeFormat.txt

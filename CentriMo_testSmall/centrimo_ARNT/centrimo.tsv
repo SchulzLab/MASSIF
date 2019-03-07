@@ -1,0 +1,16 @@
+db_index	motif_id	motif_alt_id	consensus	E-value	adj_p-value	log_adj_p-value	bin_location	bin_width	total_width	sites_in_bin	total_sites	p_success	p-value	mult_tests
+   1	JASPAR5	RXRA::VDR	GGGTCAHNGRGTTCA	6.2e-1	   5.7e-2	          -2.87	         0.0	     56.0	         86	         129	        169	  0.65116	1.4e-3	        42
+   1	JASPAR27	LEF1	AAAGATCAAAGGRWW	1.0e0	   9.5e-2	          -2.36	         0.0	     84.0	         86	         899	        908	  0.97674	2.4e-3	        42
+   1	JASPAR2	DDIT3::CEBPA	VNRTGCAATMCC	2.1e0	   1.9e-1	          -1.64	         0.0	     53.0	         89	        1722	       2778	  0.59551	4.9e-3	        44
+   1	JASPAR183	REST	TTCAGCACCATGGACAGCDCC	5.8e0	   5.3e-1	          -0.63	         0.0	     66.0	         80	         204	        232	  0.82500	1.9e-2	        39
+   1	JASPAR512	ARNT	CACGTG	1.0e1	   9.5e-1	          -0.05	         0.0	     75.0	         95	         854	       1056	  0.78947	6.3e-2	        47
+   1	JASPAR9	FOS::JUN	TGACTCA	1.1e1	   9.8e-1	          -0.02	         0.0	     30.0	         94	        1769	       5394	  0.31915	8.4e-2	        46
+   1	JASPAR1	AHR::ARNT	YGCGTG	1.1e1	   9.9e-1	          -0.01	         0.0	     41.0	         95	        1651	       3733	  0.43158	9.5e-2	        47
+   1	JASPAR8	HAND1::TCF3	BRTCTGGMWT	1.1e1	   9.9e-1	          -0.01	         0.0	      3.0	         91	         200	       5555	  0.03297	1.1e-1	        45
+   1	JASPAR7	TAL1::TCF3	NSAMCATCTGKT	1.1e1	   1.0e0	          -0.00	         0.0	     23.0	         89	         322	       1175	  0.25843	1.2e-1	        44
+   1	JASPAR6	MAFG::NFE2L1	NATGAC	1.1e1	   1.0e0	          -0.00	         0.0	     17.0	         95	        1141	       6267	  0.17895	2.6e-1	        47
+   1	JASPAR10	NR1H2::RXRA	AAAGGTCAAAGGTCAAC	1.1e1	   1.0e0	          -0.00	         0.0	     18.0	         84	           4	         17	  0.21429	5.1e-1	        41
+
+# CentriMo (Local Motif Enrichment Analysis): Version 5.0.2 compiled on Nov 15 2018 at 10:00:22
+# The format of this file is described at http://meme-suite.org/doc/centrimo-output-format.html.
+# centrimo --oc CentriMo_testSmall/centrimo_ARNT --ethresh 1000000000 tests/seq_testSmall/ARNT.fa CentriMo_testSmall/PWMsInMemeFormat.txt

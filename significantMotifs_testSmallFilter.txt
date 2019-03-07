@@ -1,0 +1,9 @@
+............TF:	REST
+TAL1::TCF3
+REST
+............TF:	ARNT
+HAND1::TCF3
+AHR::ARNT
+ARNT
+LEF1
+TAL1::TCF3
