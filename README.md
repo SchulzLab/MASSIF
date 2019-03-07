@@ -36,7 +36,7 @@ cd ../
 bash testSmall.sh path_to_meme_suite
 bash testBig.sg path_to_meme_suite
 ```
-where *path_to_meme_suite* is the path to the meme suite (something like /Home/.../meme-2.0.5/). The second test case may take some time. The final result using the domain score as a prediction are stored in 'reslt_fisherMethod_testX.sh' and for using the domain score as a filter the files are termed 'reslt_fisherMethod_testXFilter.sh', where X is either 'Small' or 'Big', depending on the test case. See [tests/test_results/] (tests/test_results/) for the results we obtained. 
+where *path_to_meme_suite* is the path to the meme suite (something like /Home/.../meme-2.0.5/). The second test case may take some time. The final result using the domain score as a prediction are stored in 'reslt_fisherMethod_testX.sh' and for using the domain score as a filter the files are termed 'reslt_fisherMethod_testXFilter.sh', where X is either 'Small' or 'Big', depending on the test case. See [tests/test_results/](tests/test_results/) for the results we obtained. 
 # Required input
 
 **Using the domain information as prediction**
