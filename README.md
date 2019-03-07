@@ -1,19 +1,19 @@
 # MASSIF - motif association with domain information
 MASSIF - motif association with domain information - is a tool to improve the performance of existing MEA tools. 
-The main idea of our approach is to use the DNA-binding domain (DBD) of the TF to develop a domain information. 
+The main idea of our approach is to use the DNA-binding domain (DBD) of the TF to develop a domain score. 
 Therefore we assume that a TF-motif association predicted by a existing MEA tool is more likely to be the correct one if the TF and the motif share a similar DNA-binding domain (DBD). 
 For the considered TF the DBD is either known or can be predicted. 
 However, we do not know the DBD for all motifs, especially for de-novo motifs. 
 For that reason we can not simply discard TF-motif pairs with different DBDs.
 Instead we construct a DBD database consisting of a set of known TF-motif pairs sorted according to their DBDs. 
 Using the information provided by the database we are able to calculate the similarity between the predicted motif and the set of motifs that are linked to the DBD of the TF. 
-We use this similarity, called domain information, in two different ways:
- - Using fisher's method to combine the domain information with the predictions of existing MEA tools.
-- Applying the domain information as a filter to reduce the motif set before the MEA.
+We use this similarity, called domain score, in two different ways:
+ - Using fisher's method to combine the domain score with the predictions of existing MEA tools.
+- Applying the domain score as a filter to reduce the motif set before the MEA.
 
 MASSIF uses as MEA tools [CentriMo](https://academic.oup.com/nar/article/40/17/e128/2411117) and [PASTAA](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2642637/). An overview is shown below:
 
-![overview.png](overview.png)
+![overview.png](overview.jpg)
 # Installation
 
 Necessarily installed software and packages:
@@ -36,13 +36,12 @@ cd ../
 bash testSmall.sh path_to_meme_suite
 bash testBig.sg path_to_meme_suite
 ```
-where *path_to_meme_suite* is the path to the meme suite (something like /Home/.../meme-2.0.5/). The second test case may take some time. 
-
+where *path_to_meme_suite* is the path to the meme suite (something like /Home/.../meme-2.0.5/). The second test case may take some time. The final result using the domain score as a prediction are stored in 'reslt_fisherMethod_testX.sh' and for using the domain score as a filter the files are termed 'reslt_fisherMethod_testXFilter.sh', where X is either 'Small' or 'Big', depending on the test case.
 # Required input
 
 **Using the domain information as prediction**
 
- To run the script where MASSIF apply the domain information as prediction the following input is required:
+ To run the script where MASSIF apply the domain score as prediction the following input is required:
  
  - **motif_file** file that contains all consider motifs as TRANSFAC format (see [tests/transfac_testSmall.txt](tests/transfac_testSmall.txt) for an example).
  - **path_to_meme_suite** path to the meme directory  
@@ -75,13 +74,13 @@ Both variations of MASSIF produce the following output:
 - **PASTAA_name** original result from PASTAA.
 - **result_PASTAA_name.txt** parsed result from PASTAA.
 - **result_DomainInfo_name.txt** ranking of the domain information (the bigger the value the better).
-- **result_fisherMethod_name.txt** final result. For each TF a ranking of motifs is given. The higher the ranking of the motif the more likely this motif corresponds to the TF. 
+- **result_fisherMethod_name.txt** final result. For each TF a ranking of motifs is given. The higher the ranking of the motif the more likely this motif corresponds to the TF. In addition the corresponding p-value is listed.
 
-Using the domain information as prediction outputs additionally:
+Using the domain score as prediction outputs additionally:
 
 - **result_DomainInfoPvalues_name.txt** ranking  of the domain information interpreted as pvalue.
 
-Applying the domain information as filter also provides as output:
+Applying the domain score as filter also provides as output:
 
-- **significantMotifs_name.txt** file that contains for each TF the reduced motif set after the domain information is applied as filter.
+- **significantMotifs_name.txt** file that contains for each TF the reduced motif set after the domain score is applied as filter.
 - **setOfPWMs_name** directory that contains for each TF the motif_file for the reduced motif set.
