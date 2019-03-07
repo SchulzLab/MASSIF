@@ -1,0 +1,15 @@
+TF:	REST
+.	predicted motif	score
+
+1	TAL1::TCF3	0.015482
+2	REST	0.033952
+
+TF:	ARNT
+.	predicted motif	score
+
+1	TAL1::TCF3	0.00015515
+2	HAND1::TCF3	0.0010908
+3	LEF1	0.009177
+4	AHR::ARNT	0.011313
+5	ARNT	0.026215
+
