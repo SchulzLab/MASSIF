@@ -1,7 +1,0 @@
-db_index	motif_id	motif_alt_id	consensus	E-value	adj_p-value	log_adj_p-value	bin_location	bin_width	total_width	sites_in_bin	total_sites	p_success	p-value	mult_tests
-   1	JASPAR504	FOXA2	TGTTTACWYWGB	8.7e-322	   4.3e-322	        -739.97	         0.0	     57.0	         89	        8765	      10833	  0.64045	9.8e-324	        44
-   1	JASPAR87	FOXA1	YNBNTGTTTACWYWD	8.7e-304	   4.4e-304	        -698.51	         0.0	     54.0	         86	        7778	       9689	  0.62791	1.0e-305	        42
-
-# CentriMo (Local Motif Enrichment Analysis): Version 5.0.2 compiled on Nov 15 2018 at 10:00:22
-# The format of this file is described at http://meme-suite.org/doc/centrimo-output-format.html.
-# centrimo --oc CentriMo_testBigFilter/centrimo_FOXA1 --ethresh 1000000000 tests/seq_testBig/FOXA1.fa CentriMo_testBigFilter/PWMsInMemeFormat.txt
