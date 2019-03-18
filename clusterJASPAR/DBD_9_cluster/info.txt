@@ -1,0 +1,4 @@
+cluster_1	GATA4	
+cluster_2	GATA5	
+cluster_3	GATA2	
+cluster_4	GATA3	GATA1	

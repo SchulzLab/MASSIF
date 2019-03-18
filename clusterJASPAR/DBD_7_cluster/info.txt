@@ -1,0 +1,4 @@
+cluster_1	SMAD2::SMAD3::SMAD4	
+cluster_2	NFIC	
+cluster_3	SMAD3	
+cluster_4	NFIA	NFIX	

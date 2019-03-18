@@ -1,0 +1,8 @@
+cluster_1	NFAT5	
+cluster_2	EBF1	
+cluster_3	NFATC3	
+cluster_4	REL	
+cluster_5	RELA	
+cluster_6	NFATC2	
+cluster_7	NFATC1	
+cluster_8	NFKB1	NFKB2	

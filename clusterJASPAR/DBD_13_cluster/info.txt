@@ -1,0 +1,35 @@
+cluster_1	CTCF	
+cluster_2	GFI1	
+cluster_3	GLI2	
+cluster_4	ZNF740	
+cluster_5	ZNF423	
+cluster_6	SP8	
+cluster_7	ZBTB18	
+cluster_8	MECOM	
+cluster_9	GFI1B	
+cluster_10	REST	
+cluster_11	ZBED1	
+cluster_12	ZNF263	
+cluster_13	HIC2	
+cluster_14	PLAG1	
+cluster_15	ZNF354C	
+cluster_16	ZFX	
+cluster_17	YY2	
+cluster_18	PRDM1	
+cluster_19	RREB1	
+cluster_20	HIC1	
+cluster_21	ZBTB33	
+cluster_22	YY1	
+cluster_23	HINFP	
+cluster_24	INSM1	
+cluster_25	MTF1	
+cluster_26	SNAI2	
+cluster_27	MZF1	
+cluster_28	MZF1(VAR.2)	
+cluster_29	SCRT1	SCRT2	
+cluster_30	GLIS2	GLIS3	GLIS1	ZIC4	ZIC1	ZIC3	
+cluster_31	BCL6	BCL6B	
+cluster_32	ZNF410	ZNF143	
+cluster_33	ZBTB7C	ZBTB7B	ZBTB7A	
+cluster_34	EGR1	EGR4	EGR2	EGR3	
+cluster_35	SP3	KLF5	SP2	SP1	KLF16	KLF12	KLF14	SP4	KLF13	KLF1	KLF4	

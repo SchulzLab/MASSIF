@@ -1,0 +1,28 @@
+cluster_1	DDIT3::CEBPA	
+cluster_2	MAFG::NFE2L1	
+cluster_3	FOS::JUN	
+cluster_4	BATF::JUN	
+cluster_5	CREB1	
+cluster_6	ATF4	
+cluster_7	CREB3L2	
+cluster_8	ATF1	
+cluster_9	CEBPG	
+cluster_10	CEBPD	
+cluster_11	MAFG	
+cluster_12	HLF	
+cluster_13	CEBPA	
+cluster_14	NFIL3	
+cluster_15	MAFF	
+cluster_16	NRL	
+cluster_17	MAFB	
+cluster_18	CEBPB	
+cluster_19	DBP	
+cluster_20	ATF3	
+cluster_21	CEBPE	
+cluster_22	NRF1	
+cluster_23	MAFK	
+cluster_24	CREM	
+cluster_25	NFE2L2	MAF::NFE2	BACH1::MAFK	
+cluster_26	CREB3L1	CREB3	XBP1	
+cluster_27	CREB5	ATF7	JDP2(VAR.2)	BATF3	JUND(VAR.2)	JUN	
+cluster_28	JDP2	FOS	JUN(VAR.2)	FOSL2	JUNB	FOSL1	JUND	NFE2	

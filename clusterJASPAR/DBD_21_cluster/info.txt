@@ -1,0 +1,6 @@
+cluster_1	PAX4	
+cluster_2	PAX6	
+cluster_3	PAX5	
+cluster_4	PAX2	
+cluster_5	PAX9	PAX1	
+cluster_6	PAX3	PAX7	

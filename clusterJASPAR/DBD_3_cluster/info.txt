@@ -1,0 +1,22 @@
+cluster_1	PPARG::RXRA	
+cluster_2	RARA::RXRA	
+cluster_3	NR1H3::RXRA	
+cluster_4	ESR1	
+cluster_5	NR2F1	
+cluster_6	ESR2	
+cluster_7	NR5A2	
+cluster_8	HNF4G	
+cluster_9	RARG(VAR.2)	
+cluster_10	NR4A2	
+cluster_11	RORA	
+cluster_12	RORA(VAR.2)	
+cluster_13	ESRRG	
+cluster_14	NR2E3	
+cluster_15	NR2E1	
+cluster_16	PPARG	
+cluster_17	NR2F6(VAR.2)	RARA	RARG	RARB	
+cluster_18	RARA(VAR.2)	RARB(VAR.2)	
+cluster_19	AR	NR3C2	NR3C1	
+cluster_20	RXRA::VDR	VDR	
+cluster_21	ESRRB	ESRRA	
+cluster_22	NR2C2	NR2F6	HNF4A	NR1H2::RXRA	RXRA	RXRB	RXRG	

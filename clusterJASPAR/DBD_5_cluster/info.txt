@@ -1,0 +1,13 @@
+cluster_1	POU5F1::SOX2	
+cluster_2	LEF1	
+cluster_3	SOX9	
+cluster_4	SRY	
+cluster_5	SOX1	
+cluster_6	SOX5	
+cluster_7	SOX6	
+cluster_8	SOX3	
+cluster_9	SOX17	
+cluster_10	SOX2	
+cluster_11	SOX10	
+cluster_12	SOX8	
+cluster_13	SOX21	SOX11	SOX4	

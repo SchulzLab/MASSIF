@@ -1,0 +1,10 @@
+cluster_1	TBX2	
+cluster_2	TBR1	
+cluster_3	TBX21	
+cluster_4	TBX20	
+cluster_5	MGA	
+cluster_6	TBX5	
+cluster_7	TBX4	
+cluster_8	EOMES	
+cluster_9	TBX19	T	
+cluster_10	TBX15	TBX1	

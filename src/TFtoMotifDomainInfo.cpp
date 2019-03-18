@@ -33,7 +33,6 @@ map<string, double> readSumTFs(string& sum_TFs_file);
 
 //main script
 int main(int argc, char *argv[]){
-
 	//input
 	cout << "input arguments: "<< endl;	
 	int opt = 0;

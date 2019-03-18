@@ -1,0 +1,5 @@
+cluster_1	STAT1::STAT2	
+cluster_2	STAT5A::STAT5B	
+cluster_3	STAT6	
+cluster_4	STAT3	
+cluster_5	STAT4	STAT1	

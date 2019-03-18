@@ -1,0 +1,42 @@
+cluster_1	AHR::ARNT	
+cluster_2	MAX::MYC	
+cluster_3	TAL1::TCF3	
+cluster_4	HAND1::TCF3	
+cluster_5	GATA1::TAL1	
+cluster_6	ARNT::HIF1A	
+cluster_7	NEUROD2	
+cluster_8	CLOCK	
+cluster_9	ASCL2	
+cluster_10	TFE3	
+cluster_11	TWIST2	
+cluster_12	HES1	
+cluster_13	MYF6	
+cluster_14	FIGLA	
+cluster_15	MSC	
+cluster_16	TCF7	
+cluster_17	MITF	
+cluster_18	NPAS2	
+cluster_19	OLIG3	
+cluster_20	TFEB	
+cluster_21	ARNTL	
+cluster_22	MNT	
+cluster_23	TCFL5	
+cluster_24	BHLHA15	
+cluster_25	HEY2	
+cluster_26	NEUROG2	
+cluster_27	TFEC	
+cluster_28	NEUROG1	
+cluster_29	TCF7L2	
+cluster_30	HES2	
+cluster_31	ID4	
+cluster_32	ATOH1	
+cluster_33	ARNT	
+cluster_34	SPZ1	
+cluster_35	SREBF1(VAR.2)	SREBF2(VAR.2)	
+cluster_36	SREBF1	SREBF2	
+cluster_37	MYC	MYCN	
+cluster_38	USF2	USF1	
+cluster_39	NHLH1	MYOD1	TCF12	MYOG	TCF21	TFAP4	
+cluster_40	TCF3	TCF4	
+cluster_41	MAX	HEY1	MLX	MLXIPL	ID2	MLXIP	BHLHE40	BHLHE41	HES7	HES5	
+cluster_42	OLIG2	BHLHE22	BHLHE23	OLIG1	

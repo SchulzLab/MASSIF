@@ -1,0 +1,8 @@
+cluster_1	TFAP2B	
+cluster_2	TFAP2B(VAR.2)	
+cluster_3	TFAP2A	
+cluster_4	TFAP2A(VAR.2)	
+cluster_5	TFAP2A(VAR.3)	
+cluster_6	TFAP2C	
+cluster_7	TFAP2C(VAR.2)	
+cluster_8	TFAP2B(VAR.3)	TFAP2C(VAR.3)	

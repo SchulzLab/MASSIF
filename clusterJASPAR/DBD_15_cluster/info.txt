@@ -1,0 +1,21 @@
+cluster_1	FOXO4	
+cluster_2	FOXD3	
+cluster_3	FOXD2	
+cluster_4	FOXQ1	
+cluster_5	FOXH1	
+cluster_6	FOXL1	
+cluster_7	FOXB1	
+cluster_8	FOXC1	
+cluster_9	FOXO3	
+cluster_10	FOXI1	
+cluster_11	FOXC2	
+cluster_12	FOXP3	
+cluster_13	FOXD1	
+cluster_14	FOXP1	
+cluster_15	E2F6	E2F4	E2F8	E2F7	
+cluster_16	RFX1	RFX4	RFX3	RFX5	RFX2	
+cluster_17	FOXO1	FOXP2	
+cluster_18	E2F1	E2F3	E2F2	
+cluster_19	FOXA1	FOXA2	
+cluster_20	FOXJ2	FOXO6	FOXF2	FOXG1	
+cluster_21	FOXK1	FOXJ3	
