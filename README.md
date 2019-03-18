@@ -21,6 +21,7 @@ Necessarily installed software and packages:
 - [The Meme Suite](http://meme-suite.org/doc/download.html) (version 5.0.2, 5.0.3 or 5.0.4) to use CentriMo
 - C++ compiler that is able to use openMP (and omp.h file which is part of the GNU OpenMP Library)
 (Notice, for Mac OS the clang++ compiler and the packages libopm is necessary. libopm can for instance be installed with 'brew install libomp')
+- [mosta](http://mosta.molgen.mpg.de/) to calculate the similarity between Position Frequency Matrices.
 
 Download the repository. Notice, that the code for PASTAA is enclosed. 
 To compile the C++ code of MASSIF and PASTAA perform the following commands: 
@@ -67,20 +68,22 @@ To run the small example we need the following command:
  with *path_to_meme_suite* is the path to the meme suite (something like /Home/.../meme-2.0.5/).
  
 **Using as input motif set the JASPAR motifs**
+
 The similarities between the consensus motifs of the DNA-binding database and the motifs of the JASPAR database are precalculated. So, if you want to use the JASPAR motifs as motif input set you just need to enter the considered TF and the corresponding DBD in [clusterJASPAR/TF_to_DBD.txt](clusterJASPAR/TF_to_DBD.txt). Notice, that this entry needs to has the following format: TF\tDBD\t-1. TF should be the name of your fasta file (without .fa) and the DBD should be a  DBD listed in [clusterJASPAR/clusterJASPAR_info.txt](clusterJASPAR/clusterJASPAR_info.txt). This file contains all DBD that are part of the DNA_binding domain database.
 
  **Using as input motif set customized motifs**
+ 
  If you want to use customized motifs, for instance predicted by a de novo motif discovery algorithm or from another motif database, the similarities between the motifs within the input set and the consensus motifs of the DNA-binding database must be calculated before running MASSIF. Therefore the following commands are necessary:
 ``` 
-#call mostra
-./src/sstat .41 list:clusterJASPAR/matrix_list.txt balanced 1 >clusterJASPAR/sstat.txt
+#call mosta
+./path_to_mosta/sstat .41 list:clusterJASPAR/matrix_list.txt balanced 1 >clusterJASPAR/sstat.txt
 #determines sumTFs.txt and DBDs.txt
 python parse_result_sstat.py clusterJASPAR/info_all_DBD.txt sstat.txt clusterJaspar/
 #determine TF_to_DBD.txt
 python TF_DBDs.py clusterJASPAR/info_all_DBD.txt  clusterJASPAR/ENSG_HGNC.txt clusterJASPAR/
 ```
 
-The file [clusterJASPAR/matrix_list.txt](matrix_list.txt) contains the paths to the consensus motifs, you need to add their the paths to your considered motifs. For an example how the format of the motifs should look like see [clusterJASPAR/DBD_1_cluster/](clusterJASPAR/DBD_1_cluster/cluster_*.mat). Notice that each motif must be stored in a seperate file. For more details how to run mostras' similarity sstat have a look at their README (see ?). The commands listed above produce the output files sumTFs.txt, DBDs.txt and TF_to_DBD.txt, which are processed by MASSIF. 
+The file [clusterJASPAR/matrix_list.txt](matrix_list.txt) contains the paths to the consensus motifs, you need to add their the paths to your considered motifs. For an example how the format of the motifs should look like see [clusterJASPAR/DBD_1_cluster/](clusterJASPAR/DBD_1_cluster/cluster_*.mat). Notice that each motif must be stored in a seperate file. For more details how to run mostas' similarity sstat have a look at their README (see ?). The commands listed above produce the output files sumTFs.txt, DBDs.txt and TF_to_DBD.txt, which are processed by MASSIF. 
 
 # Output 
 Both variations of MASSIF produce the following output: 
