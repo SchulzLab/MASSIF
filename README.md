@@ -37,8 +37,8 @@ bash testSmall.sh path_to_meme_suite
 bash testBig.sg path_to_meme_suite
 ```
 where *path_to_meme_suite* is the path to the meme suite (something like /Home/.../meme-2.0.5/). The second test case may take some time. The final result using the domain score as a prediction are stored in 'reslt_fisherMethod_testX.sh' and for using the domain score as a filter the files are termed 'reslt_fisherMethod_testXFilter.sh', where X is either 'Small' or 'Big', depending on the test case. See [tests/test_results/](tests/test_results/) for the results we obtained. 
-# Required input
 
+# Required input
 **Using the domain information as prediction**
 
  To run the script where MASSIF apply the domain score as prediction the following input is required:
@@ -65,6 +65,22 @@ To run the small example we need the following command:
   python mainScript_DomainInfoFilter.py  tests/transfac_testSmall.txt path_to_meme_suite/ tests/seq_testSmall/ testSmallFisher tests/biologicalSignal_testSmall/ RandomMotifs/pvalue_0.001_ThresholdDomainInfo.txt
  ```
  with *path_to_meme_suite* is the path to the meme suite (something like /Home/.../meme-2.0.5/).
+ 
+**Using as input motif set the JASPAR motifs**
+The similarities between the consensus motifs of the DNA-binding database and the motifs of the JASPAR database are precalculated. So, if you want to use the JASPAR motifs as motif input set you just need to enter the considered TF and the corresponding DBD in [clusterJASPAR/TF_to_DBD.txt](clusterJASPAR/TF_to_DBD.txt). Notice, that this entry needs to has the following format: TF\tDBD\t-1. TF should be the name of your fasta file (without .fa) and the DBD should be a  DBD listed in [clusterJASPAR/clusterJASPAR_info.txt](clusterJASPAR/clusterJASPAR_info.txt). This file contains all DBD that are part of the DNA_binding domain database.
+
+ **Using as input motif set customized motifs**
+ If you want to use customized motifs, for instance predicted by a de novo motif discovery algorithm or from another motif database, the similarities between the motifs within the input set and the consensus motifs of the DNA-binding database must be calculated before running MASSIF. Therefore the following commands are necessary:
+``` 
+#call mostra
+./src/sstat .41 list:clusterJASPAR/matrix_list.txt balanced 1 >clusterJASPAR/sstat.txt
+#determines sumTFs.txt and DBDs.txt
+python parse_result_sstat.py clusterJASPAR/info_all_DBD.txt sstat.txt clusterJaspar/
+#determine TF_to_DBD.txt
+python TF_DBDs.py clusterJASPAR/info_all_DBD.txt  clusterJASPAR/ENSG_HGNC.txt clusterJASPAR/
+```
+
+The file [clusterJASPAR/matrix_list.txt](matrix_list.txt) contains the paths to the consensus motifs, you need to add their the paths to your considered motifs. For an example how the format of the motifs should look like see [clusterJASPAR/DBD_1_cluster/](clusterJASPAR/DBD_1_cluster/cluster_*.mat). Notice that each motif must be stored in a seperate file. For more details how to run mostras' similarity sstat have a look at their README (see ?). The commands listed above produce the output files sumTFs.txt, DBDs.txt and TF_to_DBD.txt, which are processed by MASSIF. 
 
 # Output 
 Both variations of MASSIF produce the following output: 
