@@ -83,7 +83,7 @@ python parse_result_sstat.py clusterJASPAR/info_all_DBD.txt sstat.txt clusterJas
 python TF_DBDs.py clusterJASPAR/info_all_DBD.txt  clusterJASPAR/ENSG_HGNC.txt clusterJASPAR/
 ```
 
-The file [clusterJASPAR/matrix_list.txt](matrix_list.txt) contains the paths to the consensus motifs, you need to add their the paths to your considered motifs. For an example how the format of the motifs should look like see [clusterJASPAR/DBD_1_cluster/](clusterJASPAR/DBD_1_cluster/cluster_*.mat). Notice that each motif must be stored in a seperate file. For more details how to run mostas' similarity sstat have a look at their README (see ?). The commands listed above produce the output files sumTFs.txt, DBDs.txt and TF_to_DBD.txt, which are processed by MASSIF. 
+path_to_mosta needs to be replaced by the path to the mosta software. The file [clusterJASPAR/matrix_list.txt](matrix_list.txt) contains the paths to the consensus motifs, you need to add their the paths to your considered motifs. For an example how the format of the motifs should look like see [clusterJASPAR/DBD_1_cluster/](clusterJASPAR/DBD_1_cluster/cluster_*.mat). Notice that each motif must be stored in a seperate file. For more details how to run mostas' similarity sstat have a look at their README. The commands listed above produce the output files sumTFs.txt, DBDs.txt and TF_to_DBD.txt, which are processed by MASSIF. 
 
 # Output 
 Both variations of MASSIF produce the following output: 
