@@ -11,7 +11,7 @@ import operator
 
 
 
-def main(info_all_DBD_file,similarity_file, path_output_files):
+def main(info_all_DBD_file,similarity_file):
 	
 	result = {} #enthaelt als schlussel die DBD und als Wert eine Liste von Paaren, Paar besteht aus TF und max Wert ueber alle Cluster der DBD
 
@@ -107,7 +107,7 @@ def main(info_all_DBD_file,similarity_file, path_output_files):
 	hihi = []
  	#output = open("DBDs.txt", 'w')
  	#output = open("/MMCI/MS/EpiregDeep/work/TFtoMotifs/mosta_src/RandomMotifs/DBDs.txt", 'w')
- 	output = open(path_output_files + "/DBDs.txt", 'w')
+ 	output = open( "/DBDs.txt", 'w')
 	first = True
 	for item in result:
 #		print(item)
@@ -143,7 +143,7 @@ def main(info_all_DBD_file,similarity_file, path_output_files):
 #	print(sorted_TFs)
 #	print(hihi)
 	#output = open("sum_TFs.txt", 'w')
-	output = open(path_output_files + "/sum_TFs.txt", 'w')
+	output = open( "/sum_TFs.txt", 'w')
 #	output = open("/MMCI/MS/EpiregDeep/work/TFtoMotifs/mosta_src/RandomMotifs/sum_TFs.txt", 'w')
 	for item in hihi:
 		output.write(item + '\t'+ str(sorted_TFs[item]) + '\n')
@@ -156,6 +156,6 @@ def main(info_all_DBD_file,similarity_file, path_output_files):
 
 
 if (len(sys.argv))< 4:
-    print("Usage python ./parse_result_sstat.py info_all_DBD.txt , result_similarity.txt, path_output_files")
+    print("Usage python ./parse_result_sstat.py info_all_DBD.txt , result_similarity.txt")
 else:
-        main(sys.argv[1], sys.argv[2], sys.argv[3])
+        main(sys.argv[1], sys.argv[2])
