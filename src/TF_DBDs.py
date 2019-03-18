@@ -2,11 +2,11 @@ import sys
 import os
 import operator
 
-def main(info_file , all_TFs_file, output_dir):
+def main(info_file , all_TFs_file):
 
 	info = open(info_file, 'r')
 	all_TFs = open(all_TFs_file, 'r')
-	output = open(output_dir + "TF_to_DBD.txt", 'w')
+	output = open( "TF_to_DBD.txt", 'w')
 
 	#read all TFs 
 	sort_TFs = {}
@@ -61,7 +61,7 @@ def main(info_file , all_TFs_file, output_dir):
 
 
 	motifs = []
-	for filename in os.listdir(output_dir + "PFMs/"):
+	for filename in os.listdir("PFMs/"):
     		if filename.endswith(".mat"): 
 			filename = filename[:-4]
 			motifs.append(filename)	
@@ -77,6 +77,6 @@ def main(info_file , all_TFs_file, output_dir):
 
 
 if (len(sys.argv))< 4:
-    print("Usage python ./TF_DBDs.py info_all_DBDs.txt , ENSG_HNCG.txt, pathToMotifDir")
+    print("Usage python ./TF_DBDs.py info_all_DBDs.txt , ENSG_HNCG.tx")
 else:
-        main(sys.argv[1], sys.argv[2], sys.argv[3])
+        main(sys.argv[1], sys.argv[2])
