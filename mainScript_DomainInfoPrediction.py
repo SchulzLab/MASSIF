@@ -303,7 +303,7 @@ def main(transfac_file, CentriMo, fasta_dir, name , biological_signal):
 				current_value = -2 * (math.log(max(float(result_p[i][1]),2.2250738585072014e-308 )) + math.log(max(float(result_c[counter_centrimo][1]), 2.2250738585072014e-308)) + math.log(max(float(result_d[i][1]), 2.2250738585072014e-308 )))	
 
 				#determine pvalue
-				cdf_current_value = 1 - (chi2.cdf(current_value, df = 2)) 
+				cdf_current_value = 1 - (chi2.cdf(current_value, df = 3)) 
 
 				result_f.append((motif, current_value, cdf_current_value))
 		
