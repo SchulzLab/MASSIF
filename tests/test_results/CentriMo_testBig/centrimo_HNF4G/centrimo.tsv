@@ -19,6 +19,6 @@ db_index	motif_id	motif_alt_id	consensus	E-value	adj_p-value	log_adj_p-value	bin
    1	JASPAR174	USF2	RYCAYGTGACY	1.9e1	   1.0e0	          -0.00	         0.0	      4.0	         90	          59	       1322	  0.04444	5.1e-1	        44
    1	JASPAR398	ATF3	GATGACGT	1.9e1	   1.0e0	           0.00	         0.0	      1.0	         93	          14	       2332	  0.01075	9.9e-1	        46
 
-# CentriMo (Local Motif Enrichment Analysis): Version 5.0.2 compiled on Nov 15 2018 at 10:00:22
-# The format of this file is described at http://meme-suite.org/doc/centrimo-output-format.html.
+# CentriMo (Local Motif Enrichment Analysis): Version 5.0.4 compiled on May 16 2019 at 08:59:50
+# The format of this file is described at http://meme-suite.org//doc/centrimo-output-format.html.
 # centrimo --oc CentriMo_testBig/centrimo_HNF4G --ethresh 1000000000 tests/seq_testBig/HNF4G.fa CentriMo_testBig/PWMsInMemeFormat.txt

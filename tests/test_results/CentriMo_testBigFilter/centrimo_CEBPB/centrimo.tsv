@@ -8,6 +8,6 @@ db_index	motif_id	motif_alt_id	consensus	E-value	adj_p-value	log_adj_p-value	bin
    1	JASPAR211	MAX	AVCACGTGNY	7.8e-1	   9.7e-2	          -2.33	         0.0	     61.0	         91	        4168	       6063	  0.67033	2.3e-3	        45
    1	JASPAR160	BHLHE40	VKCACGTGMC	7.6e0	   9.5e-1	          -0.05	         0.0	     89.0	         91	        2676	       2724	  0.97802	6.5e-2	        45
 
-# CentriMo (Local Motif Enrichment Analysis): Version 5.0.2 compiled on Nov 15 2018 at 10:00:22
-# The format of this file is described at http://meme-suite.org/doc/centrimo-output-format.html.
+# CentriMo (Local Motif Enrichment Analysis): Version 5.0.4 compiled on May 16 2019 at 08:59:50
+# The format of this file is described at http://meme-suite.org//doc/centrimo-output-format.html.
 # centrimo --oc CentriMo_testBigFilter/centrimo_CEBPB --ethresh 1000000000 tests/seq_testBig/CEBPB.fa CentriMo_testBigFilter/PWMsInMemeFormat.txt

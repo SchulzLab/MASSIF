@@ -11,6 +11,6 @@ db_index	motif_id	motif_alt_id	consensus	E-value	adj_p-value	log_adj_p-value	bin
    1	JASPAR1	AHR::ARNT	YGCGTG	1.1e1	   1.0e0	          -0.00	         0.0	      1.0	         95	          41	       3654	  0.01053	3.7e-1	        47
    1	JASPAR512	ARNT	CACGTG	1.1e1	   1.0e0	           0.00	         0.0	      1.0	         95	           6	        681	  0.01053	7.2e-1	        47
 
-# CentriMo (Local Motif Enrichment Analysis): Version 5.0.2 compiled on Nov 15 2018 at 10:00:22
-# The format of this file is described at http://meme-suite.org/doc/centrimo-output-format.html.
+# CentriMo (Local Motif Enrichment Analysis): Version 5.0.4 compiled on May 16 2019 at 08:59:50
+# The format of this file is described at http://meme-suite.org//doc/centrimo-output-format.html.
 # centrimo --oc CentriMo_testSmall/centrimo_REST --ethresh 1000000000 tests/seq_testSmall/REST.fa CentriMo_testSmall/PWMsInMemeFormat.txt

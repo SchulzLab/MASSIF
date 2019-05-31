@@ -2,6 +2,6 @@ db_index	motif_id	motif_alt_id	consensus	E-value	adj_p-value	log_adj_p-value	bin
    1	JASPAR168	HNF4G	NRRGDNCAAAGKYCA	8.3e-134	   4.1e-134	        -307.13	         0.0	     48.0	         86	        7722	      11502	  0.55814	9.8e-136	        42
    1	JASPAR331	HNF4A	RGGGTCAAAGTCCAVT	7.0e-88	   3.5e-88	        -201.37	         0.0	     41.0	         85	        2498	       3888	  0.48235	8.3e-90	        42
 
-# CentriMo (Local Motif Enrichment Analysis): Version 5.0.2 compiled on Nov 15 2018 at 10:00:22
-# The format of this file is described at http://meme-suite.org/doc/centrimo-output-format.html.
+# CentriMo (Local Motif Enrichment Analysis): Version 5.0.4 compiled on May 16 2019 at 08:59:50
+# The format of this file is described at http://meme-suite.org//doc/centrimo-output-format.html.
 # centrimo --oc CentriMo_testBigFilter/centrimo_HNF4G --ethresh 1000000000 tests/seq_testBig/HNF4G.fa CentriMo_testBigFilter/PWMsInMemeFormat.txt

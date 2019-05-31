@@ -1,17 +1,3 @@
-TF:	FOXA1
-.	predicted motif	score
-
-1	FOXA1	1.66026465e-17
-2	FOXA2	4.4925234e-17
-
-TF:	YY1
-.	predicted motif	score
-
-1	YY1	1.68538398e-186
-2	ZBTB33	2.6986992e-05
-3	CTCF	1.0
-4	REST	1.0
-
 TF:	CEBPB
 .	predicted motif	score
 
@@ -23,6 +9,20 @@ TF:	CEBPB
 6	NFE2L2	0.092051124
 7	JUND	1.0
 8	MAFK	1.0
+
+TF:	FOXA2
+.	predicted motif	score
+
+1	FOXA1	1.25109224e-14
+2	FOXA2	2.7353768e-12
+
+TF:	YY1
+.	predicted motif	score
+
+1	YY1	1.68538398e-186
+2	ZBTB33	2.6986992e-05
+3	CTCF	1.0
+4	REST	1.0
 
 TF:	FOS
 .	predicted motif	score
@@ -87,18 +87,11 @@ TF:	REST
 3	CTCF	1.0
 4	YY1	1.0
 
-TF:	USF2
+TF:	FOXA1
 .	predicted motif	score
 
-1	BHLHE40	4.420616e-154
-2	USF2	8.7268558e-74
-3	MAX	2.19517849e-09
-
-TF:	FOXA2
-.	predicted motif	score
-
-1	FOXA1	1.25109224e-14
-2	FOXA2	2.7353768e-12
+1	FOXA1	1.66026465e-17
+2	FOXA2	4.4925234e-17
 
 TF:	MAFK
 .	predicted motif	score
@@ -112,41 +105,6 @@ TF:	MAFK
 7	MAX	1.0
 8	ATF3	1.0
 
-TF:	CTCF
-.	predicted motif	score
-
-1	CTCF	5.3879877e-05
-2	ZBTB33	0.80454246
-3	REST	1.0
-4	YY1	1.0
-
-TF:	ELK1
-.	predicted motif	score
-
-1	ELK1	2.19228289e-06
-2	GABPA	0.000150974171
-
-TF:	GABPA
-.	predicted motif	score
-
-1	GABPA	2.05553818e-49
-2	ELK1	2.8403423e-49
-
-TF:	MAX
-.	predicted motif	score
-
-1	MAX	9.0123137e-23
-2	BHLHE40	4.0796591e-05
-3	USF2	0.27228292
-
-TF:	ZBTB33
-.	predicted motif	score
-
-1	ZBTB33	1.80017039e-233
-2	YY1	1.0
-3	CTCF	1.0
-4	REST	1.0
-
 TF:	ATF3
 .	predicted motif	score
 
@@ -158,4 +116,46 @@ TF:	ATF3
 6	CEBPB	1.0
 7	BHLHE40	1.0
 8	MAX	1.0
+
+TF:	ELK1
+.	predicted motif	score
+
+1	ELK1	2.19228289e-06
+2	GABPA	0.000150974171
+
+TF:	ZBTB33
+.	predicted motif	score
+
+1	ZBTB33	1.80017039e-233
+2	YY1	1.0
+3	CTCF	1.0
+4	REST	1.0
+
+TF:	MAX
+.	predicted motif	score
+
+1	MAX	9.0123137e-23
+2	BHLHE40	4.0796591e-05
+3	USF2	0.27228292
+
+TF:	GABPA
+.	predicted motif	score
+
+1	GABPA	2.05553818e-49
+2	ELK1	2.8403423e-49
+
+TF:	CTCF
+.	predicted motif	score
+
+1	CTCF	5.3879877e-05
+2	ZBTB33	0.80454246
+3	REST	1.0
+4	YY1	1.0
+
+TF:	USF2
+.	predicted motif	score
+
+1	BHLHE40	4.420616e-154
+2	USF2	8.7268558e-74
+3	MAX	2.19517849e-09
 
