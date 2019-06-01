@@ -361,14 +361,15 @@ def main(transfac_file, CentriMo, fasta_dir, name , biological_signal, pvalue_cu
 			if (result_p[i][0] != result_c[counter_centrimo][0]): # or result_c[counter_centrimo][0] != result_d[i][0]):
 				motif = result_p[i][0]
 				current_value = -2 * (math.log(max(float(result_p[i][1]),2.2250738585072014e-308 )))	
-				result_f.append((motif, current_value))
+				cdf_current_value = max(1 - (chi2.cdf(current_value, df = 1)), 2.2250738585072014e-308) 
+				result_f.append((motif, current_value, cdf_current_value))
 				counter_centrimo = counter_centrimo -1
 			else:
 				motif = result_p[i][0]
 				#fishers method
 				current_value = -2 * (math.log(max(float(result_p[i][1]),2.2250738585072014e-308 )) + math.log(max(float(result_c[counter_centrimo][1]), 2.2250738585072014e-308)))	
 				#determine pvalue
-				cdf_current_value = 1 - (chi2.cdf(current_value, df = 2)) 
+				cdf_current_value = max (1 - (chi2.cdf(current_value, df = 2)),2.2250738585072014e-308) 
 				result_f.append((motif, current_value, cdf_current_value))
 		
 		result_fisher[k] = sorted(result_f, key=lambda tup : tup[1], reverse = True)
