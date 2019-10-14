@@ -13,7 +13,7 @@ We use this similarity, called domain score, in two different ways:
 
 MASSIF uses as MEA tools [CentriMo](https://academic.oup.com/nar/article/40/17/e128/2411117) and [PASTAA](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2642637/). An overview is shown below:
 
-![overview.png](overview.jpg)
+![overview.png](overview.png)
 # Installation
 
 Necessarily installed software and packages:
