@@ -32,7 +32,7 @@ def evaluationPASTAA(PASTAA, name):
 	#iterates over the results of the different seq sets	
 	for PASTAA_dir in os.listdir(PASTAA):
 		pos = PASTAA_dir.find("_")
-	    	if PASTAA_dir[:pos] == "enrichment": 
+		if PASTAA_dir[:pos] == "enrichment": 
 			actual_result = open(PASTAA + "/"  + PASTAA_dir , 'r')
 			result = []
 			for line in actual_result:
@@ -59,7 +59,7 @@ def evaluationCentriMo(centrimo_output_dir, name):
 			continue
 		else:
 			for filename in os.listdir(centrimo_output_dir + "/" +centrimo_dir):
-	    			if filename == "centrimo.tsv": 
+				if filename == "centrimo.tsv": 
 					first_line = True
 					actual_result = open(centrimo_output_dir  + "/" + centrimo_dir +'/'+ filename, 'r')
 					result = []
