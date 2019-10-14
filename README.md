@@ -1,17 +1,10 @@
 # MASSIF - motif association with domain information
-MASSIF - motif association with domain information - is a tool to improve the performance of existing MEA tools. 
-The main idea of our approach is to use the DNA-binding domain (DBD) of the TF to develop a domain score. 
-Therefore we assume that a TF-motif association predicted by a existing MEA tool is more likely to be the correct one if the TF and the motif share a similar DNA-binding domain (DBD). 
-For the considered TF the DBD is either known or can be predicted. 
-However, we do not know the DBD for all motifs, especially for de-novo motifs. 
-For that reason we can not simply discard TF-motif pairs with different DBDs.
-Instead we construct a DBD database consisting of a set of known TF-motif pairs sorted according to their DBDs. 
-Using the information provided by the database we are able to calculate the similarity between the predicted motif and the set of motifs that are linked to the DBD of the TF. 
-We use this similarity, called domain score, in two different ways:
- - Using fisher's method to combine the domain score with the predictions of existing MEA tools.
-- Applying the domain score as a filter to reduce the motif set before the MEA.
+MASSIF is a novel method to improve the performance of existing tool that link motifs to TFs relying on TF-associated sequences. MASSIF is based on the idea that a DNA-binding motif, which is correctly linked to a TF, should be assigned to a DNA-binding domain (DBD) similar to that of the mapped TF. Because DNA-binding motifs are in general not linked to DBDs, it is not possible to compare the DBD of a TF and the motif directly. Instead we created a DBD collection, which consist of TFs with a known DBD and an associated motif. This collection enables us to evaluate how likely it is that a linked motif and a TF of interest are associated to the same DBD. We named this similarity measure domain score, and represent it as a p-value.
+We developed two different ways to improve the performance of existing tools that link motifs to TFs based on TF-associated sequences:
+ (1) using meta analysis to combine p-values from one or several of these tools with the p-value of the domain score or
+(2) filter unlikely motifs based on the domain score.  
 
-MASSIF uses as MEA tools [CentriMo](https://academic.oup.com/nar/article/40/17/e128/2411117) and [PASTAA](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2642637/). An overview is shown below:
+MASSIF uses as tools [CentriMo](https://academic.oup.com/nar/article/40/17/e128/2411117) and [PASTAA](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2642637/). An overview is shown below:
 
 ![overview.png](overview.png)
 # Installation
@@ -40,7 +33,7 @@ bash testBig.sg path_to_meme_suite
 where *path_to_meme_suite* is the path to the meme suite (something like /Home/.../meme-2.0.5/). The second test case may take some time. The final result using the domain score as a prediction are stored in 'reslt_fisherMethod_testX.sh' and for using the domain score as a filter the files are termed 'reslt_fisherMethod_testXFilter.sh', where X is either 'Small' or 'Big', depending on the test case. See [tests/test_results/](tests/test_results/) for the results we obtained. 
 
 # Required input
-**Using the domain information as prediction**
+**Using the domain score as prediction**
 
  To run the script where MASSIF apply the domain score as prediction the following input is required:
  
@@ -56,7 +49,7 @@ where *path_to_meme_suite* is the path to the meme suite (something like /Home/.
  ```
  where *path_to_meme_suite* is the path to the meme suite (something like /Home/.../meme-2.0.5/).
  
-**Using the domain information as a filter**
+**Using the domain score as a filter**
 
 The script that uses the domain information as a filer needs additionally:
 - **thresholds_domainInfo** a file that gives for a specific pvalue threshold the corresponding domain information pro DNA-binding domain. The directory [RandomMotifs](RandomMotifs/) provides  several possible files for different pvalue thresholds. For the results shown in our paper, we used as a pvalue threshold 0.001 (meaning, we used the file [pvalue_0.001_ThresholdDomainInfo.txt](RandomMotifs/pvalue_0.001_ThresholdDomainInfo.txt))
