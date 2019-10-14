@@ -1,8 +1,8 @@
 # MASSIF - motif association with domain information
 MASSIF is a novel method to improve the performance of existing tool that link motifs to TFs relying on TF-associated sequences. MASSIF is based on the idea that a DNA-binding motif, which is correctly linked to a TF, should be assigned to a DNA-binding domain (DBD) similar to that of the mapped TF. Because DNA-binding motifs are in general not linked to DBDs, it is not possible to compare the DBD of a TF and the motif directly. Instead we created a DBD collection, which consist of TFs with a known DBD and an associated motif. This collection enables us to evaluate how likely it is that a linked motif and a TF of interest are associated to the same DBD. We named this similarity measure domain score, and represent it as a p-value.
 We developed two different ways to improve the performance of existing tools that link motifs to TFs based on TF-associated sequences:
-	-- using meta analysis to combine $p$-values from one or several of these tools with the $p$-value of the domain score or
-	-- filter unlikely motifs based on the domain score.  
+ (1) using meta analysis to combine $p$-values from one or several of these tools with the $p$-value of the domain score or
+(2)filter unlikely motifs based on the domain score.  
 
 MASSIF uses as tools [CentriMo](https://academic.oup.com/nar/article/40/17/e128/2411117) and [PASTAA](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2642637/). An overview is shown below:
 
