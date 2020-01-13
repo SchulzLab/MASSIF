@@ -97,3 +97,8 @@ Applying the domain score as filter also provides as output:
 
 - **significantMotifs_name.txt** file that contains for each TF the reduced motif set after the domain score is applied as filter.
 - **setOfPWMs_name** directory that contains for each TF the motif_file for the reduced motif set.
+
+# Citation
+If you use MASSIF in your work please cite:
+Improved linking of motifs to their TFs using domain information
+Baumgarten, Schmidt and Schulz, Bioinformatics, btz855, https://doi.org/10.1093/bioinformatics/btz855
