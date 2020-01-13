@@ -7,6 +7,8 @@ We developed two different ways to improve the performance of existing tools tha
 MASSIF uses as tools [CentriMo](https://academic.oup.com/nar/article/40/17/e128/2411117) and [PASTAA](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2642637/). An overview is shown below:
 
 ![overview.png](overview.png)
+More details on the method can be found in our [paper](https://doi.org/10.1093/bioinformatics/btz855).
+
 # Installation
 
 Necessarily installed software and packages:
@@ -100,5 +102,7 @@ Applying the domain score as filter also provides as output:
 
 # Citation
 If you use MASSIF in your work please cite:
+
 Improved linking of motifs to their TFs using domain information
-Baumgarten, Schmidt and Schulz, Bioinformatics, btz855, https://doi.org/10.1093/bioinformatics/btz855
+
+N Baumgarten, F Schmidt and MH Schulz, Bioinformatics, btz855, 2019, https://doi.org/10.1093/bioinformatics/btz855
