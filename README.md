@@ -13,7 +13,7 @@ More details on the method can be found in our [paper](https://doi.org/10.1093/b
 
 Necessarily installed software and packages:
 
-- [The Meme Suite](http://meme-suite.org/doc/download.html) (version 5.0.2, 5.0.3 or 5.0.4) to use CentriMo.
+- [The Meme Suite](http://meme-suite.org/doc/download.html) (version 5.0.2, 5.0.3 or 5.0.4) to use CentriMo. Add the tool to our PATH  environment variable. 
 - C++ compiler that is able to use openMP (and omp.h file which is part of the GNU OpenMP Library)
 (Notice, for Mac OS the clang++ compiler and the packages libopm is necessary. libopm can for instance be installed with 'brew install libomp')
 - [mosta](http://mosta.molgen.mpg.de/) to calculate the similarity between Position Frequency Matrices.
@@ -32,7 +32,7 @@ cd ../
 bash testSmall.sh 
 bash testBig.sh
 ```
-The *path_to_meme_suite* must be set in our PATH variable. The second test case may take some time. The final result using the domain score as a prediction are stored in 'result_fisherMethod_testX.sh' and for using the domain score as a filter the files are termed 'result_fisherMethod_testXFilter.sh', where X is either 'Small' or 'Big', depending on the test case. See [tests/test_results/](tests/test_results/) for the results we obtained. 
+The second test case may take some time. The final result using the domain score as a prediction are stored in 'result_fisherMethod_testX.sh' and for using the domain score as a filter the files are termed 'result_fisherMethod_testXFilter.sh', where X is either 'Small' or 'Big', depending on the test case. See [tests/test_results/](tests/test_results/) for the results we obtained. 
 
 # Required input
 **Using the domain score as prediction**
