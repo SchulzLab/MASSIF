@@ -269,21 +269,20 @@ int main(int argc, char *argv[]){
 //.............
 //#pragma omp parallel default(shared)
 //{
-#pragma omp parallel for  private(dE_forward, dE_compl, illegalBase, BASE, product, P_bound_F, P_bound_C, P_combined, totalvalids) num_threads(5)
+//#pragma omp parallel for  private(dE_forward, dE_compl, illegalBase, BASE, product, P_bound_F, P_bound_C, P_combined, totalvalids) num_threads(5)
 //.............
 
     //LOOP OVER FACTORS
     for(int f = 0; f <= factors; f++){
 
       if(seqlength < motiflength[f]){
-        cout << "\t" << 0;
+        //cout << "\t" << 0;
+	factors_result[f] = 0;
         continue;
       }
 
       P_combined = 0;
       totalvalids = 0;
-
-
 
       //LOOP OVER SEQUENCE
       for(int n = 0; n < seqlength - motiflength[f] + 1; n++){ //LOOP OVER SEQUENCE
@@ -321,7 +320,6 @@ int main(int argc, char *argv[]){
 
 	}//loop over motif
 	
-
 	//CALCULATE P(BOUND) FOR CURRENT SITE
 	if(illegalBase == 0){
 	  product = exp(lnR0[f] - dE_forward);
@@ -334,12 +332,14 @@ int main(int argc, char *argv[]){
 	  totalvalids++;
 	}
 
-
       }//loop over sequence
 
 	if(outputtype == 0){
 		if (totalvalids > 0){
 			factors_result[f] = P_combined/totalvalids;
+		}
+		else{
+			 factors_result[f] = 0;
 		}
 	}else{
 		factors_result[f] = P_combined;

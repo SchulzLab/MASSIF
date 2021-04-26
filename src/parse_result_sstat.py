@@ -105,9 +105,9 @@ def main(info_all_DBD_file,similarity_file):
 	# for each DBD and each TF write max value over all cluster
 	sorted_TFs = {}
 	hihi = []
- 	#output = open("DBDs.txt", 'w')
+ 	output = open("DBDs.txt", 'w')
  	#output = open("/MMCI/MS/EpiregDeep/work/TFtoMotifs/mosta_src/RandomMotifs/DBDs.txt", 'w')
- 	output = open( "/DBDs.txt", 'w')
+ 	#output = open( "/DBDs.txt", 'w')
 	first = True
 	for item in result:
 #		print(item)
@@ -142,8 +142,8 @@ def main(info_all_DBD_file,similarity_file):
 	#--------------------------------
 #	print(sorted_TFs)
 #	print(hihi)
-	#output = open("sum_TFs.txt", 'w')
-	output = open( "/sum_TFs.txt", 'w')
+	output = open("sum_TFs.txt", 'w')
+	#output = open( "/sum_TFs.txt", 'w')
 #	output = open("/MMCI/MS/EpiregDeep/work/TFtoMotifs/mosta_src/RandomMotifs/sum_TFs.txt", 'w')
 	for item in hihi:
 		output.write(item + '\t'+ str(sorted_TFs[item]) + '\n')
@@ -155,7 +155,7 @@ def main(info_all_DBD_file,similarity_file):
 
 
 
-if (len(sys.argv))< 4:
+if (len(sys.argv))< 3:
     print("Usage python ./parse_result_sstat.py info_all_DBD.txt , result_similarity.txt")
 else:
         main(sys.argv[1], sys.argv[2])

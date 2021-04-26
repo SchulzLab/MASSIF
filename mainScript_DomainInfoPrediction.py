@@ -7,11 +7,15 @@ from scipy.stats import chi2
 
 #Global variables
 NUMBER_CLUSTERS = 35
+#NUMBER_CLUSTERS = 95
 NUMBER_THREADS = 5
 CLUSTER_JASPAR = "clusterJASPAR/"
+#CLUSTER_JASPAR = "/MMCI/MS/EpiregDeep/work/TFtoMotifs/mosta_src/JASPAR_only_homo_sapiens/HOCOMOCO/clusterSim/"
 NUMBER_MOTIFS = 100000.0 #random motifs
 PATH_RANDOM_MOTIFS = "RandomMotifs/"  
-
+#NUMBER_DATABASE_MOTIFS = 551 #JASPAR
+NUMBER_DATABASE_MOTIFS = 515 #JASPAR
+#NUMBER_DATABASE_MOTIFS = 401 #HOCOMOCO
 
 def writeOutput(output, result, TF):
 
@@ -33,7 +37,7 @@ def evaluationPASTAA(PASTAA, name):
 	#iterates over the results of the different seq sets	
 	for PASTAA_dir in os.listdir(PASTAA):
 		pos = PASTAA_dir.find("_")
-	    	if PASTAA_dir[:pos] == "enrichment": 
+		if PASTAA_dir[:pos] == "enrichment": 
 			actual_result = open(PASTAA + "/"  + PASTAA_dir , 'r')
 			result = []
 			for line in actual_result:
@@ -60,7 +64,7 @@ def evaluationCentriMo(centrimo_output_dir, name):
 			continue
 		else:
 			for filename in os.listdir(centrimo_output_dir + "/" +centrimo_dir):
-		    		if filename == "centrimo.tsv": 
+				if filename == "centrimo.tsv": 
 					first_line = True
 					actual_result = open(centrimo_output_dir  + "/" + centrimo_dir +'/'+ filename, 'r')
 					result = []
@@ -71,7 +75,8 @@ def evaluationCentriMo(centrimo_output_dir, name):
 						else:	
 							line = line.strip()
 							line = line.split('\t')
-							name = line[2].split(' ')
+							name = line[2].split(' ') #alternative name
+					#		name = line[1].split(' ')
 							number = float(line[5]) #adjusted pvalue
 							#number = float(line[4]) #E value
 							result.append((name[-1], number))
@@ -188,10 +193,13 @@ def determinePvaluesOfDomainInfo(inputFile, DBD_info_dir,DBD_file, outputFile):
 #	name of the run
 #	path_to_biological_signal (for PASTAA)
 #---------------
-def main(transfac_file, CentriMo, fasta_dir, name , biological_signal):
+#def main(transfac_file, CentriMo, fasta_dir, name , biological_signal):
+def main(transfac_file, fasta_dir, name , biological_signal):
 
-
-	fasta_files = [f for f in os.listdir(fasta_dir)] #if isfile(join(fasta_dir, f))]
+	if fasta_dir[-3:] == '.fa':
+		fasta_files = [fasta_dir]
+	else:
+		fasta_files = [f for f in os.listdir(fasta_dir)] #if isfile(join(fasta_dir, f))]
 	#---------------
 	#CentriMo
 	#---------------
@@ -201,32 +209,44 @@ def main(transfac_file, CentriMo, fasta_dir, name , biological_signal):
 	command = "mkdir -p CentriMo_" + name
 	call(command)
 	#step2: parse transfac PWMs in meme format
-	command = CentriMo + "/scripts/transfac2meme " + transfac_file + " >CentriMo_" + name+ "/PWMsInMemeFormat.txt"
+	#command = CentriMo + "/scripts/transfac2meme " + transfac_file + " >CentriMo_" + name+ "/PWMsInMemeFormat.txt"
+	command = "transfac2meme " + transfac_file + " >CentriMo_" + name+ "/PWMsInMemeFormat.txt"
 	call(command)
 	
 	for f in fasta_files:
 		TF = f[:-3]
-		command =  CentriMo + "/src/centrimo --oc " +"CentriMo_"+ name + "/centrimo_"+ TF + " --ethresh 1000000000 " + fasta_dir + f + " CentriMo_"+  name +"/PWMsInMemeFormat.txt"
+		print(TF)
+		if fasta_dir == f:
+			#command =  CentriMo + "/src/centrimo --oc " +"CentriMo_"+ name + "/centrimo_"+ TF + " --ethresh 1000000000 " + fasta_dir + " CentriMo_"+  name +"/PWMsInMemeFormat.txt"
+			command =  "centrimo --oc " +"CentriMo_"+ name + "/centrimo_"+ TF + " --ethresh 1000000000 " + fasta_dir + " CentriMo_"+  name +"/PWMsInMemeFormat.txt"
+		else:
+			#command =  CentriMo + "/src/centrimo --oc " +"CentriMo_"+ name + "/centrimo_"+ TF + " --ethresh 1000000000 " + fasta_dir + f + " CentriMo_"+  name +"/PWMsInMemeFormat.txt"
+			command =  "centrimo --oc " +"CentriMo_"+ name + "/centrimo_"+ TF + " --ethresh 1000000000 " + fasta_dir + f + " CentriMo_"+  name +"/PWMsInMemeFormat.txt"
 		call(command)
 			
 	result_centrimo = evaluationCentriMo("CentriMo_" + name, name)
-	
-	#---------------
 	#PASTAA 
 	#---------------
 	print("----------\nPASTAA\n----------")
-
+	#print(name)
 	command = "mkdir -p PASTAA_" + name
 	call(command)
-	command = "./src/PSCM_to_PSEM " + transfac_file +  " >PASTAA_" + name  + "/energy.txt"
+	command = "./src/PSCM_to_PSEM " + transfac_file +  " >PASTAA_" + name  + "/energy.txt" #TODO: rausfinden was da es problem ist 
+	print(command)
 	call(command)
 
 	for f in fasta_files:
 		TF = f[:-3]
-		command =  "./src/TRAP PASTAA_"+ name + "/energy.txt " +  fasta_dir + f + " > PASTAA_"+ name + "/affinity_" + TF + ".txt"	
+		#TF = "TCF15"
+		print(TF)
+		if fasta_dir == f:
+			command =  "./src/TRAP PASTAA_"+ name + "/energy.txt " +  fasta_dir + " > PASTAA_"+ name + "/affinity_" + TF + ".txt"
+		else:
+			command =  "./src/TRAP PASTAA_"+ name + "/energy.txt " +  fasta_dir + f + " > PASTAA_"+ name + "/affinity_" + TF + ".txt"	
 		call(command)
 
 		command =  "./src/PASTAA PASTAA_" + name  + "/affinity_" + TF + ".txt " + biological_signal + "gene_list_" + TF +  ".txt |  sort -k2,2 -g  > PASTAA_"+ name + "/enrichment_" + TF + ".txt"
+		#command =  "./src/PASTAA PASTAA_" + name  + "/affinity_" + TF + ".txt " + biological_signal + "gene_id_with_signal_" + TF +  ".txt |  sort -k2,2 -g  > PASTAA_"+ name + "/enrichment_" + TF + ".txt"
 		call(command)
 
 	result_pastaa = evaluationPASTAA("PASTAA_"+ name, name)
@@ -242,13 +262,13 @@ def main(transfac_file, CentriMo, fasta_dir, name , biological_signal):
 	command = "mkdir -p PFMs"
 	call(command)
 	
-	command = "python src/convertCountMatrixToFreqMatrix.py "  + transfac_file +  " PFMs/" 
+	command = "python3 src/convertCountMatrixToFreqMatrix.py "  + transfac_file +  " PFMs/" 
 	call(command)
 	
 	#---------------
 	#Step2: call TFtoMOtifDomainInfo
 	#---------------
-	command = "./src/TFtoMotifDomainInfo PFMs/ " + fasta_dir + " result_DomainInfo_" + name + ".txt " + CLUSTER_JASPAR + "sum_TFs.txt " + CLUSTER_JASPAR + "DBDs.txt " + CLUSTER_JASPAR + "TF_to_DBD.txt"
+	command = "./src/TFtoMotifDomainInfo -a " + str(NUMBER_DATABASE_MOTIFS) +  " PFMs/ " + fasta_dir + " result_DomainInfo_" + name + ".txt " + CLUSTER_JASPAR + "sum_TFs.txt " + CLUSTER_JASPAR + "DBDs.txt " + CLUSTER_JASPAR + "TF_to_DBD.txt"
 	call(command)
 	#---------------
 	#Step3: determine pvalues for resulting DomainInfo values
@@ -291,8 +311,9 @@ def main(transfac_file, CentriMo, fasta_dir, name , biological_signal):
 			if (result_p[i][0] != result_c[counter_centrimo][0] or result_c[counter_centrimo][0] != result_d[i][0]):
 				if result_p[i][0] != result_c[counter_centrimo][0]:
 					motif = result_p[i][0]
+					#print("motif: " + motif)
 					current_value = -2 * (math.log(max(float(result_p[i][1]),2.2250738585072014e-308 )) + math.log(max(float(result_d[i][1]), 2.2250738585072014e-308 )))	
-					cdf_current_value = max(1 - (chi2.cdf(current_value, df = 2)), 2.2250738585072014e-308)
+					cdf_current_value = max(1.0 - (chi2.cdf(current_value, df = 2)), 2.2250738585072014e-308)
 					result_f.append((motif, current_value, cdf_current_value))
 					counter_centrimo = counter_centrimo -1
 				else:
@@ -302,11 +323,12 @@ def main(transfac_file, CentriMo, fasta_dir, name , biological_signal):
 				motif = result_p[i][0]
 				#fishers method
 				current_value = -2 * (math.log(max(float(result_p[i][1]),2.2250738585072014e-308 )) + math.log(max(float(result_c[counter_centrimo][1]), 2.2250738585072014e-308)) + math.log(max(float(result_d[i][1]), 2.2250738585072014e-308 )))	
+			#current_value = -2 * (math.log(max(float(result_p[i][1]),2.2250738585072014e-308 )) + math.log(max(float(result_d[i][1]), 2.2250738585072014e-308 )))	
 
 				#determine pvalue
-				cdf_current_value = max(1 - (chi2.cdf(current_value, df = 3)),2.2250738585072014e-308)
+				cdf_current_value = max(1.0 - (chi2.cdf(current_value, df = 3)),2.2250738585072014e-308)
 
-				result_f.append((motif, current_value, cdf_current_value))
+			result_f.append((motif, current_value, cdf_current_value))
 		
 		result_fisher[k] = sorted(result_f, key=lambda tup : tup[1], reverse = True)
 
@@ -325,7 +347,7 @@ def main(transfac_file, CentriMo, fasta_dir, name , biological_signal):
 	#	writeOutput(final_output, result_fisher[k], k)	
 	
 # call main
-if(len(sys.argv))< 6:
-	print("Necessary arguments are not given! python ./mainScript_domainInfoPrediction.py transfac_file, CentriMo_source_code_dir, fasta_dir,name,  biological_signal")
+if(len(sys.argv))< 5:
+	print("Necessary arguments are not given! python ./mainScript_domainInfoPrediction.py transfac_file,  fasta_dir,name,  biological_signal")
 else:
-	main(sys.argv[1], sys.argv[2], sys.argv[3], sys.argv[4], sys.argv[5])
+	main(sys.argv[1], sys.argv[2], sys.argv[3], sys.argv[4])

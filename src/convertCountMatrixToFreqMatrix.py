@@ -151,7 +151,7 @@ def main(input_file, output_dir):
 			#name = line[2]
 #			print(name)
 
-		elif line[0] == "XX" or line[0] == "//" or line[0] == "P0" or line[0] == "AC" or line[0] == "DE":
+		elif line[0] == "XX" or line[0] == "//" or line[0] == "P0" or line[0] == "AC" or line[0] == "DE" or line[0] == "VV" or line[0] == "NA" or line[0] == "BF":
 			continue
 
 		else:

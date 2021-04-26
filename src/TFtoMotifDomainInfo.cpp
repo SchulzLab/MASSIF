@@ -22,9 +22,10 @@ using namespace std;
 
 //Global variables default values 
 int NUMBER_ALL_TFs = 515; // number TFs that are consider in DBDs and sum_TFs fuer K652
-int MAXIMUM_LENGTH_SEQUENCE = 1000; // number of the maximum lenght of the input sequnces
+int MAXIMUM_LENGTH_SEQUENCE = 100000000; // number of the maximum lenght of the input sequnces
 
 //functions
+bool checkIfDir(string path_to_pro_files);
 vector<string> readDirectory(const char *path);
 double DomainInfo(string& TF, string& motif, map<string, pair<string, int>>& TF_DBDs, map<string, vector<double>>& DBDs, map<string, double>& sum_TFs);
 map<string,pair<string, int>> readTF_DBDs(string& TF_to_DBD_file);
@@ -75,12 +76,12 @@ int main(int argc, char *argv[]){
 	cout <<"DBDs: " << DBDs_file << endl;
 	map<string, vector<double>> DBDs = readDBDs(DBDs_file);
 	//check DBDs
-//	for (auto& i: DBDs){
-//		cout << i.first << ": ";
-//		for (auto& j : i.second)
-//			cout << j << " ";
-//		cout << endl;
-//	}
+/*	for (auto& i: DBDs){
+		cout << i.first << ": ";
+		for (auto& j : i.second)
+			cout << j << " ";
+		cout << endl;
+	}*/
 
 	string TF_to_DBD_file = argv[optind++];
 	cout <<"TF_to_DBD: " << TF_to_DBD_file << endl;
@@ -92,14 +93,25 @@ int main(int argc, char *argv[]){
 //		cout << j.first << " "  << j.second;
 //		cout << ") ";
 //	}
-//	cout << endl;
-//	cout << "---------------------------" << endl;
+	cout << endl;
+	cout << "---------------------------" << endl;
 
-
+	
 	//store all names of PWMs and seq_files in vectors
 	vector<string> PWM_files = readDirectory(path_to_pwms.c_str());
 //	cout << "number pwm files: " << PWM_files.size() << endl;
-	vector<string> pro_files = readDirectory(path_to_pro_files.c_str());
+
+
+	//determine is input provided as files (one single fasta input file) or as directory with multiple fasta files
+	vector<string> pro_files;
+	if (checkIfDir(path_to_pro_files)){
+		cout << "directory with fasta files" << endl;
+		pro_files = readDirectory(path_to_pro_files.c_str());
+	}else{
+		pro_files.push_back(path_to_pro_files);
+		cout << "one fasta file detected" << endl;
+	}
+
 //	cout << "number pro files: " << pro_files.size() << endl;
 
 	//calculate for each motif the DomainInfo for 
@@ -111,14 +123,22 @@ int main(int argc, char *argv[]){
                 if(pro_files[i] == "info.txt"){
                          continue;
                 }
-		TF = pro_files[i].substr(0 , pro_files[i].size() -3); // set actual TF
-//		cout << "TF: " << TF << endl;
+		auto found = pro_files[i].find_last_of("/");
+		if (found == string::npos or found == pro_files[i].size()-1 ){ // size starts by 1
+			TF = pro_files[i].substr(0 , pro_files[i].size() -3); // set actual TF
+		}else{
+			string tmp = pro_files[i].substr(found+1);
+			TF = pro_files[i].substr(found + 1, tmp.size() -3); // set actual TF
+		}
+	//	cout << "TF: " << TF << endl;
 		//write parts of the output
 		output << "TF:\t" + TF + "\n.\tpredicted Motif\tscore\n\n";
 		vector<pair<double, string>> results;
 		for(unsigned int j = 0; j < PWM_files.size(); ++j){ // iterate over all given motifs
 			motif = PWM_files[j].substr(0 , PWM_files[j].size() -4); // set motif
+	//		cout << motif << endl;
 			pvalue_domainInfo = DomainInfo(TF, motif, TF_DBDs, DBDs, sum_TFs); // calculate pvalue of DomainInfo
+//			cout << pvalue_domainInfo << endl;
 			results.push_back(make_pair(pvalue_domainInfo, motif));
 		}
 //		for(auto & i : results)	
@@ -132,6 +152,34 @@ int main(int argc, char *argv[]){
 		output << endl;
 	}
 }
+
+
+/*
+*input: path to directory
+*output: true if the string is really a path (meaning the string does not containthe char  '.') , false if not
+*/
+
+
+bool checkIfDir(string path_to_pro_files){
+
+
+	auto point  = path_to_pro_files.find(".fa");
+	if ((point == string::npos)){
+		return true;
+	
+	}else{
+
+		ifstream f(path_to_pro_files.c_str());
+    		if (f.good()){
+		//if (is_regular_file(path_to_pro_files)){
+			return false;
+		}else{
+			throw invalid_argument ("cannot open input fasta file");
+
+		}
+	}
+}	
+
 /*
 *input: path to a directory
 *output: vector that contains the names of all files of the directory
@@ -144,7 +192,6 @@ vector<string> readDirectory(const char *path){
   	dirent* de;
 
   	DIR* dp;
-
   	dp = opendir(path);
 	if (dp == NULL){
 		throw invalid_argument("sorry can not open directory");
@@ -170,13 +217,13 @@ double DomainInfo(string& TF, string& motif, map<string, pair<string, int>>& TF_
 	double info = 0.0;
 	
 	DBD = TF_DBDs[TF].first;
-	//cout << "DBD: " << DBD << endl;
+//	cout << "DBD: " << DBD << endl;
 	sumTF = sum_TFs[motif];
-	//cout << "sumTFs: " << sumTF << endl;
+//	cout << "sumTFs: " << sumTF << endl;
 	Smax = DBDs[DBD][TF_DBDs[motif].second];
-	//cout << "Smax: " << Smax << endl;
+//	cout << "Smax: " << Smax << endl;
 	info = Smax / sumTF;
-	//cout << "DomainInfo: " << info << endl;
+//	cout << "DomainInfo: " << info << endl;
 	return (info);
 }
 /*
@@ -267,7 +314,6 @@ map<string, pair<string, int>> readTF_DBDs(string& TF_to_DBD_file){
 	string help = "";
 
 	while(getline(TF_to_DBD, key, '\t')){
-		
 		getline(TF_to_DBD, DBD, '\t');
 		getline(TF_to_DBD, help);
 		TF_DBDs[key] =  make_pair(DBD, stoi(help));
